@@ -1,0 +1,114 @@
+[
+  {
+    "title": "Blitz State",
+    "description": "Лендинг агенства недвижимости",
+    "category": "wordpress",
+    "img": "/assets/img/blitzestate.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/wesites/blitzestate"
+  },
+  {
+    "title": "Car Service",
+    "description": "Лендинг автомастерской",
+    "category": "wordpress",
+    "img": "/assets/img/carservice.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/wesites/carservice"
+  },
+  {
+    "title": "Отель Долина",
+    "description": "Лендинг отеля",
+    "category": "wordpress",
+    "img": "/assets/img/hoteldolina.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/wesites/dolinahotel"
+  },
+  {
+    "title": "Luxury Detailing",
+    "description": "Лендинг детейлинга автомобилей",
+    "category": "wordpress",
+    "img": "/assets/img/luxurycar.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/wesites/luxurycar"
+  },
+  {
+    "title": "РумТибет",
+    "description": "Лендинг горных экскурсий",
+    "category": "wordpress",
+    "img": "/assets/img/mountainwalking.png",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/wesites/mountainwalking"
+  },
+  {
+    "title": "Music Artist",
+    "description": "Сайт музыканта",
+    "category": "wordpress",
+    "img": "/assets/img/musicartist.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/wesites/musicartist"
+  },
+  {
+    "title": "Music Band",
+    "description": "Сайт музыкальной группы",
+    "category": "wordpress",
+    "img": "/assets/img/musicband.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/wesites/musicband"
+  },
+  {
+    "title": "Поставщик Дальнего Востока",
+    "description": "Лендинг логистической компании",
+    "category": "wordpress",
+    "img": "/assets/img/pdvpage.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/wesites/pdv-landing"
+  },
+  {
+    "title": "Car Service",
+    "description": "Лендинг студии разработки",
+    "category": "wordpress",
+    "img": "/assets/img/softerio-tech.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/wesites/softeriotech"
+  },
+  {
+    "title": "ReadyOn",
+    "description": "Лендинг аренды спорткаров",
+    "category": "wordpress",
+    "img": "/assets/img/sportcarrent.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/wesites/sportcarrent"
+  },
+  {
+    "title": "Wishbone Partners",
+    "description": "Лендинг архитектурной компании",
+    "category": "wordpress",
+    "img": "/assets/img/wishbonelanding.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/wesites/wishbone"
+  },
+  {
+    "title": "WolfMedia",
+    "description": "Лендинг диджитал агенства",
+    "category": "tailwind",
+    "img": "/assets/img/wolfmedia.jpg",
+    "tags": ["HTML", "TAILWIND"],
+    "demo": "/wesites/wolfmedia"
+  },
+  {
+    "title": "Astro Blog + Portfolio",
+    "description": "Шаблон портфолио с функцией блога на Astro",
+    "category": "astro",
+    "img": "/assets/img/astroblogportfolio.jpg",
+    "tags": ["ASTRO"],
+    "demo": "https://astroblogportfolio.netlify.app/"
+  },
+  {
+    "title": "Strike The Hub",
+    "description": "Геймерский портал, посвященный шутерам",
+    "category": "react",
+    "img": "/assets/img/strikethehub.jpg",
+    "tags": ["REACT", "TAILWIND"],
+    "demo": "https://strikethehub.netlify.app"
+  }
+]
