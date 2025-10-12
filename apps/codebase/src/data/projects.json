@@ -104,11 +104,35 @@
     "demo": "https://astroblogportfolio.netlify.app/"
   },
   {
+    "title": "Astro Blog",
+    "description": "Astro Блог",
+    "category": "astro",
+    "img": "/assets/img/astroblog.jpg",
+    "tags": ["ASTRO"],
+    "demo": "https://astro-blog01.netlify.app/"
+  },
+  {
+    "title": "Old Astro Blog + Portfolio",
+    "description": "Мое старое портфолио+блог на Astro",
+    "category": "astro",
+    "img": "/assets/img/oldportfolioastro.jpg",
+    "tags": ["ASTRO", "REACT"],
+    "demo": "https://astro-blog01.netlify.app/"
+  },
+  {
     "title": "Strike The Hub",
     "description": "Геймерский портал, посвященный шутерам",
     "category": "react",
     "img": "/assets/img/strikethehub.jpg",
     "tags": ["REACT", "TAILWIND"],
+    "demo": "https://strikethehub.netlify.app"
+  },
+  {
+    "title": "Luxury Detailing",
+    "description": "Лендинг детейлинга автомобилей на React",
+    "category": "react",
+    "img": "/assets/img/luxurycar.jpg",
+    "tags": ["REACT"],
     "demo": "https://strikethehub.netlify.app"
   }
 ]
