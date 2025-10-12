@@ -1,0 +1,14 @@
+
+> my-app@0.1.0 build C:\Programming\code-archive-projects\apps\react-landing
+> react-scripts build
+
+Creating an optimized production build...
+Failed to compile.
+
+[eslint] Invalid Options:
+- Unknown options: extensions, resolvePluginsRelativeTo
+- 'extensions' has been removed.
+- 'resolvePluginsRelativeTo' has been removed.
+
+
+ ELIFECYCLE  Command failed with exit code 1.
