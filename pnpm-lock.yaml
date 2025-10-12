@@ -75,6 +75,12 @@ importers:
         specifier: ^7.8.2
         version: 7.9.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
 
+  apps/astroblogportfolio:
+    devDependencies:
+      astro:
+        specifier: ^5.13.3
+        version: 5.14.1(@netlify/blobs@10.0.11)(@types/node@24.6.2)(jiti@2.6.1)(rollup@4.52.4)(terser@5.44.0)(typescript@5.9.3)(yaml@2.8.1)
+
   apps/codebase:
     dependencies:
       '@astrojs/mdx':
