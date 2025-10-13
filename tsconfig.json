@@ -10,8 +10,10 @@
   "references": [
     { "path": "apps/codebase" },
     { "path": "apps/astroblogportfolio" },
-    { "path": "apps/mainportfolionextjs" },
     { "path": "apps/astro-multilang" },
-    { "path": "apps/astro-blog" }
+    { "path": "apps/astro-blog" },
+    { "path": "apps/game-portal" },
+    { "path": "apps/b2bhelpadmin" },
+    { "path": "apps/luxurycar-react-landing" }
   ]
 }
