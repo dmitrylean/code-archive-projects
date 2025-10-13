@@ -194,5 +194,26 @@
     "category": "gamedev",
     "img": "https://i.ytimg.com/vi/wYqJ7AyEuhc/maxresdefault.jpg",
     "docs": "https://www.mixamo.com/#/"
+  },
+  {
+    "title": "Godot",
+    "description": "Движок для создания игр",
+    "category": "gamedev",
+    "img": "https://docs.godotengine.org/en/4.4/_images/editor_intro_workspace_3d.webp",
+    "docs": "https://docs.godotengine.org/en/stable/"
+  },
+  {
+    "title": "NodeJS",
+    "description": "Backend-фреймворк",
+    "category": "js",
+    "img": "https://www.weetechsolution.com/wp-content/uploads/2022/08/What-is-Nodejs.jpg",
+    "docs": "https://nodejs.org"
+  },
+  {
+    "title": "NestJS",
+    "description": "Backend-фреймворк",
+    "category": "js",
+    "img": "https://cdn.intuji.com/2022/09/Nestjs_hero1.png",
+    "docs": "https://docs.nestjs.com/"
   }
 ]
