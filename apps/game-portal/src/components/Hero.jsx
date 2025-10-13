@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="hero py-16 bg-black text-white bg-[url('/assets/img/hero-image.jpg')] bg-no-repeat bg-center bg-cover h-screen">
+    <section className="hero py-16 bg-black text-white bg-[url('https://img.goodfon.com/wallpaper/big/6/c1/crysis-2-krizis-gorod-crytek-4394.webp')] bg-no-repeat bg-center bg-cover h-screen">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
         {/* Left Column */}
         <div className="hero-text max-w-lg mb-10 md:mb-0">
