@@ -2,13 +2,12 @@
 > codebase@0.0.1 build C:\Programming\code-archive-projects\apps\codebase
 > astro build
 
-14:44:12 [vite] Re-optimizing dependencies because lockfile has changed
-14:44:12 [content] Syncing content
-14:44:13 [content] Synced content
-14:44:13 [types] Generated 864ms
-14:44:13 [build] output: "static"
-14:44:13 [build] mode: "static"
-14:44:13 [build] directory: C:\Programming\code-archive-projects\apps\codebase\dist\
-14:44:13 [build] Collecting build info...
-14:44:13 [build] ✓ Completed in 914ms.
-14:44:13 [build] Building static entrypoints...
+18:18:41 [content] Syncing content
+18:18:41 [content] Synced content
+18:18:41 [types] Generated 724ms
+18:18:41 [build] output: "static"
+18:18:41 [build] mode: "static"
+18:18:41 [build] directory: C:\Programming\code-archive-projects\apps\codebase\dist\
+18:18:41 [build] Collecting build info...
+18:18:41 [build] ✓ Completed in 787ms.
+18:18:41 [build] Building static entrypoints...
