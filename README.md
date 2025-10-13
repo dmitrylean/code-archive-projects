@@ -1,131 +1,140 @@
 # ⚡ Crash The Routines (Astro)
 
-📚 **Crash The Routines** — это личная кодовая база, UI-библиотека и справочник по фронтенд-разработке, собранный на **Astro**.  
-Проект объединяет примеры верстки, готовые блоки интерфейсов, мини-проекты и статьи, чтобы ускорить разработку и обмен опытом.
+📚 **Crash The Routines** is a personal codebase, UI library, and frontend development reference, hosted on **Astro**.
+The project features mockups, ready-made interface blocks, mini-projects, and articles to speed up development and share best practices.
 
 ---
 
-## 💡 Идея проекта
+## 💡 Project Idea
 
-Этот репозиторий — не просто коллекция демо или шаблонов.  
-Здесь я храню собственные проекты по вёрстке (**HTML / CSS / JS**), которые используются как **кодовая база** и база знаний.
+This repository is more than just a collection of demos or templates.
+Here I store my own layout projects (**HTML/CSS/JS**), which I use as a **codebase** and knowledge base.
 
-Когда я смотрел аналогичные репозитории с HTML-проектами, во многих код оказался устаревшим и запутанным.  
-Поэтому я решил собрать всё, что верстал за последний год, в одном месте — в современном формате и с понятной структурой.
+When I looked through repositories with HTML projects, many of the codes were outdated and confusing.
+So, I decided to gather everything that has happened over the past year in one place—in a modern format and with a clear structure.
 
-**Crash The Routines** задумывался как справочник, где можно быстро найти,  
-как сверстать конкретный блок, добавить нужную функцию или подсмотреть логику компонента.  
-Проще говоря — это мой личный "полевой набор разработчика",  
-который со временем превратился в полноценный open-source проект.
-
----
-
-## 🔧 Стек технологий
-
-- [Astro](https://astro.build/) — основа проекта, сборка и интеграция компонентов
-- HTML / CSS / JS — базовые шаблоны и примеры
-- Markdown / MDX — статьи, гайды и встроенные примеры кода
-- (в перспективе) TypeScript и React-компоненты
+**Crash The Routines** was conceived as a reference guide where you can quickly find out how to create a specific block, add a necessary function, or view the logic of a component.
+Simply put, it's my personal "developer's field kit,"
+which over time has evolved into a full-fledged open source project.
 
 ---
 
-## 🚀 Возможности
+## 🔧 Tech Stack
 
-- Сборник собственных решений по вёрстке
-- Компоненты интерфейса: карточки, формы, плейеры, хиро-блоки и др.
-- Интеграции с фреймворками и библиотеками
-- Поиск и удобная структура через Astro
-- Документация и статьи прямо в `content/`
+- [Astro](https://astro.build/) — project base, build, and integration components
+- HTML/CSS/JS — basic templates and examples
+- Markdown/MDX — articles, guides, and built-in code samples. - (coming soon) TypeScript and React components
 
 ---
 
-## 📂 Структура проекта
+## 🚀 Features
+
+- A collection of solid layout solutions
+- Interface components: cards, forms, players, hero blocks, etc.
+- Integrations with frameworks and libraries
+- Search and strengthen the structure via Astro
+- Documentation and articles directly in `content/`
+
+---
+
+## 📂 Project Structure
 
 ```
 
-src/
-├─ components/ # UI и функциональные блоки
-├─ content/ # статьи, шпаргалки и примеры
-├─ layouts/ # шаблоны страниц
-└─ public/ # иконки, изображения и ассеты. Включает папку websites, где хранятся статические сайты
-└─ data/ # шаблоны в папке templates (Astro / React / Next) и брошенные проекты в папке projects (PHP / Python)
+Source/
+├─ Components/ # UI and Functional Blocks
+├─ Contents/ # Articles, Cheat Sheets, and Examples
+├─ Layouts/ # Page Templates
+└─ Public/ # Icons, Images, and Assets. Enable selection of websites where static sites are stored.
+└─ data/ #templates in email templates (Astro/React/Next) and abandoned projects in email projects (PHP/Python)
 
 ```
 
-После запуска проект доступен по адресу:
+After launch, the project is available at:
 👉 [http://localhost:4321](http://localhost:4321)
 
 ---
 
-## 🧞 Команды
+## 🔹 7. Run and Build Locally
 
-| Команда                   | Действие                                       |
-| :------------------------ | :--------------------------------------------- |
-| `npm install`             | Установка зависимостей                         |
-| `npm run dev`             | Запуск локального сервера `localhost:4321`     |
-| `npm run build`           | Сборка проекта в `./dist/`                     |
-| `npm run preview`         | Локальный предпросмотр собранного сайта        |
-| `npm run astro ...`       | Запуск Astro CLI команд (`add`, `check` и др.) |
-| `npm run astro -- --help` | Помощь по командам CLI                         |
+### All Projects at Once
 
----
+```bash
+pnpm dev # runs all dev servers in parallel
+pnpm build # builds everything
+```
 
-## 🤝 Как контрибьютить
+### Single Project
 
-Проект открыт для контрибьюторов, дизайнеров и разработчиков.
-Можно добавлять новые UI-компоненты, улучшать статьи, фиксить ошибки или обновлять документацию.
+```bash
+pnpm turbo run dev --filter=astro-app
+pnpm turbo run build --filter=next-app
+```
 
-### 🔹 Шаги
+Check the list of available projects:
 
-1. **Fork** репозиторий и клонируйте свой форк:
-   ```bash
-   git clone https://github.com/your-username/crash-the-routines.git
-   ```
-
-2. Создайте ветку:
-
-   ```bash
-   git checkout -b feature/your-feature
-   ```
-
-3. Внесите изменения, добавьте описание и закоммитьте:
-
-   ```bash
-   git commit -m "Add: new MusicPlayer component"
-   ```
-
-4. Откройте **Pull Request** и коротко опишите свой вклад.
-
-> 💬 Всё, что делает проект лучше — от редактуры текста до кода — приветствуется!
+```bash
+pnpm list -r
+```
 
 ---
 
-## 🧠 Код-стиль
+## 🤝 How to contribute
 
-- Используем **ESLint** и **Prettier**
-- Компоненты — маленькие, переиспользуемые
-- Комментарии пишем только к сложной логике
-- Следим за читаемостью и структурой кода
+The project is open to contributors, designers, and developers.
+You can add new UI components, improve articles, fix bugs, or update the documentation.
+
+### 🔹 Steps
+
+1. Fork the repository and clone your fork:
+
+```bash
+git clone https://github.com/your-username/crash-the-routines.git
+```
+
+2. Create a branch:
+
+```bash
+git checkout -b function/your-function
+```
+
+3. Make your changes, description sections, and commit:
+
+```bash
+git commit -m "Add: new MusicPlayer component"
+```
+
+4. Open a **Pull Request** and briefly describe your contribution.
+
+> 💬 Anything that makes the project better—from text revisions to code—is welcome!
 
 ---
 
-## 💬 Сообщество
+## 🧠 Code Style
 
-Если у вас есть идеи, вопросы или вы хотите поучаствовать —
-откройте Issue или обсудите в [Discussions](../../discussions).
-
-🎧 Проект открыт для контрибьюта.
-
----
-
-## 🧡 Благодарности
-
-Спасибо каждому, кто помогает проекту развиваться.
-Crash The Routines — это не просто код, а попытка превратить хаос идей в структурированный опыт.
+- Use **ESLint** and **Prettier**
+- Components are small and reusable.
+- Comments are only for logic.
+- We focus on code readability and structure.
 
 ---
 
-### Автор
+## 💬 Community
 
-**Dmitry Lean** — фронтенд-разработчик 🎶
+If you have ideas, questions, or would like to participate, please submit a request for membership or discuss in [Discussions](../../discussions).
+
+🎧 The project is open for contributions.
+
+---
+
+## 🧡 Acknowledgments
+
+Thanks to everyone who helps the project grow.
+Crash The Routines isn't just code; it's an attempt to transform the chaos of ideas into a structured experience.
+
+---
+
+### Author
+
+**Dmitry Lean** — Software Developer 🎶
 [GitHub Profile](https://github.com/dmitrylean)
