@@ -25,16 +25,7 @@ body {
   padding: 20px;
 }
 
-
-p, span {
+p,
+span {
   color: white;
-}
-
-.tracklist-title {
-  text-align: center;
-  font-size: 48px;
-  font-weight: 900;
-  letter-spacing: 2px;
-  color: white;
-  margin-bottom: 10px;
 }
