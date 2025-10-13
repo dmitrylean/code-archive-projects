@@ -215,5 +215,40 @@
     "category": "js",
     "img": "https://cdn.intuji.com/2022/09/Nestjs_hero1.png",
     "docs": "https://docs.nestjs.com/"
+  },
+  {
+    "title": "Tina CMS",
+    "description": "CMS",
+    "category": "cms",
+    "img": "https://assets.tina.io/06bcd49e-f919-4e53-a2c4-77f656491c7d/img/brand-assets/logo-black-on-background-min.png",
+    "docs": "https://tina.io/docs/setup-overview"
+  },
+  {
+    "title": "Directus CMS",
+    "description": "CMS",
+    "category": "cms",
+    "img": "https://directus.io/__og-image__/static/og.png",
+    "docs": "https://directus.io/docs/getting-started/overview"
+  },
+  {
+    "title": "Strapi CMS",
+    "description": "CMS",
+    "category": "cms",
+    "img": "https://orendra.com/blog/content/images/size/w1000/2024/08/strapi-featured-image-scaled.jpg",
+    "docs": "https://strapi.io/"
+  },
+  {
+    "title": "Contentfull CMS",
+    "description": "CMS",
+    "category": "cms",
+    "img": "https://cdn.intuji.com/2023/10/Contentful_Logo_dark.jpg",
+    "docs": "https://www.contentful.com/"
+  },
+  {
+    "title": "Sanity CMS",
+    "description": "CMS",
+    "category": "cms",
+    "img": "https://miro.medium.com/v2/1*G2_tUpKDzvqOPsB5WD51YQ.png",
+    "docs": "https://www.sanity.io/"
   }
 ]
