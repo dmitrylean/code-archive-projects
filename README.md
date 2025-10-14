@@ -21,9 +21,31 @@ which over time has evolved into a full-fledged open source project.
 
 ## 🔧 Tech Stack
 
+### _Frontend_
+
 - [Astro](https://astro.build/) — project base, build, and integration components
 - HTML/CSS/JS — basic templates and examples
 - Markdown/MDX — articles, guides, and built-in code samples. - (coming soon) TypeScript and React components
+- React
+- Typescript
+- NextJS
+
+---
+
+## 🧩 Projects
+
+### Frontend
+
+| Project                                                                     | Stack                    | Discription                               |
+| --------------------------------------------------------------------------- | ------------------------ | ----------------------------------------- |
+| [**astro-blog**](https://astro-blog01.netlify.app/)                         | Astro, Typescript        | Astro blog with categories and search     |
+| [**astro-multilang**](https://astro-multilang.netlify.app)                  | Astro, React, Typescript | My old multi-lang portfolio + blog.       |
+| [**astro-multilink**](https://github.com/username/api-server)               | Astro                    | Coming Soon.                              |
+| [**astroblogportfolio**](https://astroblogportfolio.netlify.app/)           | Astro, Typescript        | Astro Blog + Portfolio.                   |
+| [**b2bhelpadmin**](https://reactb2badmin.netlify.app/)                      | React, Tailwind          | React dashboard.                          |
+| [**codebase**](https://www.crashtheroutine.site/)                           | Astro, Typescript        | Portfolio, reference book, blog on Astro. |
+| [**game-portal**](https://github.com/username/godot-experiment)             | React, Tailwind          | React game portal.                        |
+| [**luxurycar-react-landing**](https://github.com/username/godot-experiment) | React                    | React landing.                            |
 
 ---
 
@@ -42,11 +64,9 @@ which over time has evolved into a full-fledged open source project.
 ```
 
 Source/
-├─ Components/ # UI and Functional Blocks
-├─ Contents/ # Articles, Cheat Sheets, and Examples
-├─ Layouts/ # Page Templates
-└─ Public/ # Icons, Images, and Assets. Enable selection of websites where static sites are stored.
-└─ data/ #templates in email templates (Astro/React/Next) and abandoned projects in email projects (PHP/Python)
+├─ apps/ # Astro / React / Next projects
+├─ mobile/ # React Native & Flutter projects
+├─ backend/ # CMS, API, Server for control projects
 
 ```
 
@@ -55,7 +75,7 @@ After launch, the project is available at:
 
 ---
 
-## 🔹 7. Run and Build Locally
+## 🔹 Run and Build Locally
 
 ### All Projects at Once
 
