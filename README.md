@@ -1,25 +1,11 @@
-# ⚡ Crash The Routines (Astro)
+# Crash The Routines (Astro)
 
-📚 **Crash The Routines** is a personal codebase, UI library, and frontend development reference, hosted on **Astro**.
+**Crash The Routines** is a personal codebase, UI library, portfolio and frontend development reference, hosted on **Astro**.
 The project features mockups, ready-made interface blocks, mini-projects, and articles to speed up development and share best practices.
 
 ---
 
-## 💡 Project Idea
-
-This repository is more than just a collection of demos or templates.
-Here I store my own layout projects (**HTML/CSS/JS**), which I use as a **codebase** and knowledge base.
-
-When I looked through repositories with HTML projects, many of the codes were outdated and confusing.
-So, I decided to gather everything that has happened over the past year in one place—in a modern format and with a clear structure.
-
-**Crash The Routines** was conceived as a reference guide where you can quickly find out how to create a specific block, add a necessary function, or view the logic of a component.
-Simply put, it's my personal "developer's field kit,"
-which over time has evolved into a full-fledged open source project.
-
----
-
-## 🔧 Tech Stack
+## Tech Stack
 
 ### _Frontend_
 
@@ -32,7 +18,7 @@ which over time has evolved into a full-fledged open source project.
 
 ---
 
-## 🧩 Projects
+## Projects
 
 ### Frontend
 
@@ -49,7 +35,7 @@ which over time has evolved into a full-fledged open source project.
 
 ---
 
-## 🚀 Features
+## Features
 
 - A collection of solid layout solutions
 - Interface components: cards, forms, players, hero blocks, etc.
@@ -59,7 +45,7 @@ which over time has evolved into a full-fledged open source project.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 
@@ -71,7 +57,7 @@ Source/
 ```
 
 After launch, the project is available at:
-👉 [http://localhost:4321](http://localhost:4321)
+[http://localhost:4321](http://localhost:4321)
 
 ---
 
@@ -99,38 +85,7 @@ pnpm list -r
 
 ---
 
-## 🤝 How to contribute
-
-The project is open to contributors, designers, and developers.
-You can add new UI components, improve articles, fix bugs, or update the documentation.
-
-### 🔹 Steps
-
-1. Fork the repository and clone your fork:
-
-```bash
-git clone https://github.com/your-username/crash-the-routines.git
-```
-
-2. Create a branch:
-
-```bash
-git checkout -b function/your-function
-```
-
-3. Make your changes, description sections, and commit:
-
-```bash
-git commit -m "Add: new MusicPlayer component"
-```
-
-4. Open a **Pull Request** and briefly describe your contribution.
-
-> 💬 Anything that makes the project better—from text revisions to code—is welcome!
-
----
-
-## 🧠 Code Style
+## Code Style
 
 - Use **ESLint** and **Prettier**
 - Components are small and reusable.
@@ -139,22 +94,7 @@ git commit -m "Add: new MusicPlayer component"
 
 ---
 
-## 💬 Community
-
-If you have ideas, questions, or would like to participate, please submit a request for membership or discuss in [Discussions](../../discussions).
-
-🎧 The project is open for contributions.
-
----
-
-## 🧡 Acknowledgments
-
-Thanks to everyone who helps the project grow.
-Crash The Routines isn't just code; it's an attempt to transform the chaos of ideas into a structured experience.
-
----
-
 ### Author
 
-**Dmitry Lean** — Software Developer 🎶
+**Dmitry Lean** — Software Developer
 [GitHub Profile](https://github.com/dmitrylean)
