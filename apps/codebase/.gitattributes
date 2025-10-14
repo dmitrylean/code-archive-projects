@@ -1,5 +1,7 @@
 *.astro linguist-detectable=true
-*.mdx linguist-detectable=true
+*.jsx linguist-detectable=true
+*.tsx linguist-detectable=true
+*.mdx linguist-detectable=false
 *.css linguist-detectable=false
 *.html linguist-detectable=false
 *.php filter=lfs diff=lfs merge=lfs -text
