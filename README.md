@@ -16,6 +16,11 @@ The project features mockups, ready-made interface blocks, mini-projects, and ar
 - Typescript
 - NextJS
 
+### _Backend_
+
+- Strapi
+- ExpressJS
+
 ---
 
 ## Projects
