@@ -14,6 +14,7 @@
     { "path": "apps/astro-blog" },
     { "path": "apps/game-portal" },
     { "path": "apps/b2bhelpadmin" },
-    { "path": "apps/luxurycar-react-landing" }
+    { "path": "apps/luxurycar-react-landing" },
+    { "path": "apps/astro-multilink" }
   ]
 }
