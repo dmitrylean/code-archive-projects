@@ -2,100 +2,13 @@
 > codebase@0.0.1 build C:\Programming\code-archive-projects\apps\codebase
 > astro build
 
-19:22:13 [vite] Re-optimizing dependencies because lockfile has changed
-19:22:14 [content] Syncing content
-19:22:14 [content] Synced content
-19:22:14 [types] Generated 887ms
-19:22:14 [build] output: "static"
-19:22:14 [build] mode: "static"
-19:22:14 [build] directory: C:\Programming\code-archive-projects\apps\codebase\dist\
-19:22:14 [build] Collecting build info...
-19:22:14 [build] ✓ Completed in 963ms.
-19:22:14 [build] Building static entrypoints...
-19:22:24 [vite] [32m✓ built in 9.50s[39m
-19:22:24 [build] ✓ Completed in 9.56s.
-
- building client (vite) 
-19:22:24 [vite] transforming...
-19:22:24 [vite] [32m✓[39m 21 modules transformed.
-19:22:24 [vite] rendering chunks...
-19:22:24 [vite] computing gzip size...
-19:22:24 [vite] [2mdist/[22m[36m_astro/client.Bx7k8SOM.js  [39m[1m[2m194.63 kB[22m[1m[22m[2m │ gzip: 60.99 kB[22m
-19:22:24 [vite] [32m✓ built in 546ms[39m
-
- generating static routes 
-19:22:24 ▶ src/pages/404.astro
-19:22:24   └─ /404.html (+8ms) 
-19:22:24 ▶ src/pages/About.astro
-The collection "blog" does not exist or is empty. Please check your content config file for errors.
-19:22:24   └─ /About/index.html (+6ms) 
-19:22:24 ▶ src/pages/articles/[slug].astro
-19:22:24   ├─ /articles/createbrunchgit/index.html (+8ms) 
-19:22:24   ├─ /articles/astrocategory/index.html (+12ms) 
-19:22:24   ├─ /articles/findwork/index.html (+3ms) 
-19:22:24   ├─ /articles/freelancebot/index.html (+6ms) 
-19:22:24   ├─ /articles/figmaplugins/index.html (+3ms) 
-19:22:24   ├─ /articles/fullstacknext/index.html (+24ms) 
-19:22:24   ├─ /articles/intotailwindreact/index.html (+7ms) 
-19:22:24   ├─ /articles/importjsxinastro/index.html (+6ms) 
-19:22:24   ├─ /articles/iworkincallcenter/index.html (+4ms) 
-19:22:24   ├─ /articles/library/index.html (+4ms) 
-19:22:24   ├─ /articles/newsbot/index.html (+4ms) 
-19:22:24   ├─ /articles/makemonorepo/index.html (+9ms) 
-19:22:24   ├─ /articles/multibuildastro/index.html (+11ms) 
-19:22:24   ├─ /articles/multilangreact/index.html (+32ms) 
-19:22:25   ├─ /articles/reactguttenberg/index.html (+14ms) 
-19:22:25   ├─ /articles/solfirusscam/index.html (+4ms) 
-19:22:25   ├─ /articles/trashworks/index.html (+3ms) 
-19:22:25   └─ /articles/workspacescript/index.html (+10ms) 
-19:22:25 ▶ src/pages/Articles.astro
-19:22:25   └─ /Articles/index.html (+2ms) 
-19:22:25 ▶ src/pages/category/[category].astro
-19:22:25   ├─ /category/Git/index.html (+1ms) 
-19:22:25   ├─ /category/Astro/index.html (+1ms) 
-19:22:25   ├─ /category/Blog/index.html (+1ms) 
-19:22:25   ├─ /category/Python/index.html (+1ms) 
-19:22:25   ├─ /category/Figma/index.html (+1ms) 
-19:22:25   ├─ /category/Nextjs/index.html (+1ms) 
-19:22:25   ├─ /category/React/index.html (+1ms) 
-19:22:25   ├─ /category/CDN/index.html (+1ms) 
-19:22:25   └─ /category/Development/index.html (+1ms) 
-19:22:25 ▶ src/pages/Components.astro
-19:22:25   └─ /Components/index.html (+2ms) 
-19:22:25 ▶ src/pages/Contact.astro
-19:22:25   └─ /Contact/index.html (+1ms) 
-19:22:25 ▶ src/pages/example/[slug].astro
-19:22:25   ├─ /example/audioplayer/index.html (+9ms) 
-19:22:25   ├─ /example/calc/index.html (+8ms) 
-19:22:25   ├─ /example/darktheme/index.html (+5ms) 
-19:22:25   ├─ /example/first/index.html (+5ms) 
-19:22:25   ├─ /example/forms/index.html (+17ms) 
-19:22:25   ├─ /example/contactform/index.html (+8ms) 
-19:22:25   ├─ /example/footer/index.html (+12ms) 
-19:22:25   ├─ /example/nav/index.html (+7ms) 
-19:22:25   ├─ /example/geoblock/index.html (+7ms) 
-19:22:25   ├─ /example/icons/index.html (+6ms) 
-19:22:25   ├─ /example/navburger/index.html (+7ms) 
-19:22:25   ├─ /example/nocopy/index.html (+3ms) 
-19:22:25   ├─ /example/onepagescroll/index.html (+5ms) 
-19:22:25   ├─ /example/price/index.html (+6ms) 
-19:22:25   ├─ /example/socialbar/index.html (+5ms) 
-19:22:25   └─ /example/switcher/index.html (+6ms) 
-19:22:25 ▶ src/pages/Example.astro
-19:22:25   └─ /Example/index.html (+1ms) 
-19:22:25 ▶ src/pages/news/[slug].astro
-19:22:25   └─ /news/testpost/index.html (+9ms) 
-19:22:25 ▶ src/pages/News.astro
-19:22:25   └─ /News/index.html (+1ms) 
-19:22:25 ▶ src/pages/Projects.astro
-19:22:25   └─ /Projects/index.html (+1ms) 
-19:22:25 ▶ src/pages/Services.astro
-19:22:25   └─ /Services/index.html (+1ms) 
-19:22:25 ▶ src/pages/Source.astro
-19:22:25   └─ /Source/index.html (+1ms) 
-19:22:25 ▶ src/pages/index.astro
-19:22:25   └─ /index.html (+1ms) 
-19:22:25 ✓ Completed in 364ms.
-
-19:22:25 [build] 55 page(s) built in 11.85s
-19:22:25 [build] Complete!
+16:56:41 [vite] Re-optimizing dependencies because lockfile has changed
+16:56:42 [content] Syncing content
+16:56:42 [content] Synced content
+16:56:42 [types] Generated 873ms
+16:56:42 [build] output: "static"
+16:56:42 [build] mode: "static"
+16:56:42 [build] directory: C:\Programming\code-archive-projects\apps\codebase\dist\
+16:56:42 [build] Collecting build info...
+16:56:42 [build] ✓ Completed in 917ms.
+16:56:42 [build] Building static entrypoints...
