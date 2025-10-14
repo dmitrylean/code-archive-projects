@@ -1,0 +1,1296 @@
+---
+title: "Внедрение бэкэнда в React-проект"
+category: "React"
+---
+
+## ⚙️ Почему выносить backend — это правильно
+
+1. **Netlify не тратит билды** — каждая функция или API живёт отдельно.
+2. **Можно использовать разные технологии** (Node, Deno, Supabase и т.д.).
+3. **Проекты становятся независимыми** — можно показывать:
+
+   > “Frontend — Astro, backend — Node/Express (деплой на Render)”.
+
+4. **Легче развивать архитектуру** — каждый репо как микросервис.
+
+---
+
+## 🎮 Что можно сделать с твоим Game Portal
+
+Ты говорил, что хочешь переделать его — отличная идея, потому что у него уже классная концепция.
+Вот несколько направлений, куда можно двинуть проект:
+
+---
+
+### 💡 Вариант 1. **Game Scores API**
+
+**Идея:** превратить Game Portal в **портал с рейтингами игроков и API для хранения результатов**.
+
+**Структура:**
+
+- `/api/scores` — CRUD для результатов
+- `/api/players` — список игроков
+- `/api/leaderboard` — топ игроков
+
+**Фронт:** твой React-портал, где можно смотреть рейтинг.
+**Бэк:** Node.js (Express) или Deno (Supabase + Edge Functions).
+
+📦 Добавь JWT или простую авторизацию — и будет “игровой сервис с REST API”.
+
+> “Built a gaming portal with a custom backend for player scores, authentication, and dynamic leaderboards.”
+
+---
+
+### 💡 Вариант 2. **Game News Aggregator**
+
+**Идея:** портал новостей о видеоиграх, который тянет новости с нескольких API (например, RAWG.io или IGN RSS).
+
+**Фронт:** React / Astro (страницы, карточки, поиск).
+**Бэк:** Node.js serverless функция → собирает данные с внешних API → кэширует.
+
+✅ Работает быстро, не требует базы, можно деплоить хоть на Cloudflare Workers.
+
+> “Built a game news portal using React and serverless API integrations with data caching.”
+
+---
+
+### 💡 Вариант 3. **Mini Indie Game Launcher (UI + API)**
+
+**Идея:** симулировать платформу для инди-игр — карточки, описания, демо, рейтинг.
+
+**Фронт:** React / Tailwind
+**Бэк:** Supabase (таблица `games`, `users`, `ratings`)
+**API:** `/api/games`, `/api/rating`, `/api/user`
+
+Можно сделать фейковую авторизацию (через Supabase Auth)
+и добавить демо-секции “Play demo” — просто видео или iframe.
+
+> “Created an indie game showcase platform with backend integration and rating system.”
+
+---
+
+## 🔧 Где всё это хостить (и не тратить лимит Netlify)
+
+| Хостинг                | Что туда ставить               | Почему классно                                          |
+| ---------------------- | ------------------------------ | ------------------------------------------------------- |
+| **Render.com**         | Node.js API / Express / SQLite | Free tier, auto-deploy из GitHub                        |
+| **Railway.app**        | Node.js API / PostgreSQL       | Легкий деплой, авто CI/CD                               |
+| **Cloudflare Workers** | Edge-функции                   | Мгновенно, супердешево, идеален для статического фронта |
+| **Supabase**           | Backend-as-a-Service           | БД + Auth + Storage, бесплатно                          |
+| **Deno Deploy**        | Serverless API                 | Быстро, идеально интегрируется с Astro                  |
+
+---
+
+## 🔩 Архитектурный трюк
+
+Чтобы не городить монорепо и при этом легко связывать фронт и бэк:
+
+1. Создай отдельный репо `game-portal-api`
+2. В `.env` или настройках фронта (`game-portal`) укажи `VITE_API_URL=https://game-api.onrender.com`
+3. Теперь фронт тянет данные с внешнего API, и билды Netlify не страдают 🚀
+
+---
+
+## 🎯 Цель проекта
+
+Создать **игровую платформу**, где пользователь может:
+
+1. Пополнить баланс (например, через карту, крипту или Steam Gift)
+2. Купить игровые ключи
+3. Купить / продать предметы из игр
+
+---
+
+## 🧩 Разбор по блокам
+
+### 1️⃣ **Пополнение Steam-баланса**
+
+Ты сказал: “с первым более-менее понятно” — и ты прав.
+
+Есть 2 пути:
+
+#### ✅ _Белый путь (API + реселлеры)_
+
+- **Steam Gifts** — можно продавать гифт-коды через посредников.
+- **Платёжные агрегаторы** вроде **Unitpay**, **FreeKassa**, **Interkassa**, **CryptoCloud**, **NowPayments**.
+- Твоя роль: принимать оплату, выдавать код (где ты покупаешь — у партнёров).
+
+🧠 Технически:
+
+- Фронт: Astro / React
+- Бэк: Node + Express
+- Эндпоинт `/api/payment` → интеграция с платёжкой
+- После оплаты → `/api/gift/redeem` → выдать ключ (из базы)
+
+#### ⚙️ _Серый путь (вручную, через API стим-группы)_
+
+- Можно через SteamBot (бота) пересылать гифты пользователям.
+- Но для этого нужны **аккаунты-боты, кошельки и VPN**, и это уже зона “не для продакшна”.
+
+---
+
+### 2️⃣ **Продажа ключей (Steam, Origin, Uplay и т.д.)**
+
+Вот тут всё интереснее.
+
+#### 💡 Как это делают легальные конторы:
+
+1. Берут ключи у **официальных реселлеров** (Humble, GreenManGaming, Fanatical, G2A API и т.д.)
+2. Подключают **их API** к своему сайту
+3. На фронте показывают каталог → клиент оплачивает → твой бэк тянет ключ через API → сохраняет в БД → выдает покупателю.
+
+📦 **Пример API:**
+
+- [G2A API](https://www.g2a.co/api/)
+- [Kinguin API](https://www.kinguin.net/developer/)
+- [Eneba API (не публичный, но можно через парсинг)]
+- [GreenManGaming API](https://www.greenmangaming.com/)
+
+🧠 Для MVP можно:
+
+- хранить ключи вручную в БД (sqlite/postgres)
+- после оплаты → выдавать случайный доступный ключ
+- отмечать как “проданный”
+
+Так можно сделать рабочий **“мини-магазин ключей”** без API, а потом заменить хранилище на API поставщика.
+
+---
+
+### 3️⃣ **Предметы из игр (скины, внутриигровые вещи)**
+
+Тут два сценария:
+
+#### ⚙️ _Игры с открытой экономикой (CS2, Dota2, TF2)_
+
+Там всё через **Steam Inventory API** или **Steam Marketplace API**.
+Ты можешь:
+
+- отображать предметы из инвентаря пользователя
+- делать “оценку” предмета по рыночной цене (через сторонние API вроде CSGOFloat, SteamApis.com)
+- организовать обмен через **Steam Trade Offers API** (требует API key и бот-аккаунты)
+
+#### ⚠️ _Но важно:_
+
+Valve очень строго следит за ботами и “торговыми сайтами”.
+Если ты не делаешь серый рынок — можно просто **отображать рыночные цены и историю продаж**, без прямых обменов.
+
+---
+
+## 🧠 Как собрать MVP (и остаться в легальном поле)
+
+1. **Frontend:** React / Astro (страницы: каталог, покупка, оплата, выдача ключа)
+
+2. **Backend:** Node.js (Express + SQLite)
+
+3. **API-модели:**
+
+   ```js
+   /api/products      // список игр
+   /api/payment       // создание платежа
+   /api/payment/success // обработка колбэка от платежки
+   /api/key/redeem    // выдача ключа после оплаты
+   ```
+
+4. **База:**
+   - `products` (название, цена, тип, stock)
+   - `keys` (product_id, key, is_sold)
+   - `orders` (user_email, product_id, payment_status)
+
+5. **Интеграция:**
+   - платёжка → твой бекэнд → выдача ключа
+   - можно начать с “ручного” добавления ключей
+
+---
+
+## 🧩 1. Где хранить сами ключи
+
+Тут важно понять одну вещь:
+**ключ = деньги**.
+Каждый ключ — это, по сути, цифровой товар, и ты не хочешь, чтобы кто-то просто открыл `/api/keys` и спёр весь твой “ассортимент”.
+
+Поэтому:
+
+- ключи **никогда не должны лежать в открытом виде в БД**;
+- ты **не возвращаешь их напрямую по API**, если не проверил оплату;
+- и даже в админке они должны быть **зашифрованы**.
+
+---
+
+### 💾 Оптимальная схема хранения
+
+| Поле          | Тип       | Примечание             |
+| ------------- | --------- | ---------------------- |
+| id            | int       | Primary key            |
+| product_id    | int       | Ссылка на игру         |
+| key_encrypted | text      | AES-зашифрованный ключ |
+| is_sold       | boolean   | 0/1                    |
+| sold_at       | timestamp | когда продан           |
+
+---
+
+### 🔐 Пример шифрования (Node.js + Crypto)
+
+```js
+import crypto from "crypto";
+
+const ALGO = "aes-256-ctr";
+const SECRET = process.env.KEY_SECRET;
+
+export const encrypt = (text) => {
+  const iv = crypto.randomBytes(16);
+  const cipher = crypto.createCipheriv(ALGO, Buffer.from(SECRET, "hex"), iv);
+  const encrypted = Buffer.concat([cipher.update(text), cipher.final()]);
+  return iv.toString("hex") + ":" + encrypted.toString("hex");
+};
+
+export const decrypt = (hash) => {
+  const [iv, content] = hash.split(":");
+  const decipher = crypto.createDecipheriv(
+    ALGO,
+    Buffer.from(SECRET, "hex"),
+    Buffer.from(iv, "hex"),
+  );
+  const decrypted = Buffer.concat([
+    decipher.update(Buffer.from(content, "hex")),
+    decipher.final(),
+  ]);
+  return decrypted.toString();
+};
+```
+
+Так ты можешь хранить ключи в БД зашифрованными — даже если кто-то получит дамп, он не сможет ничего использовать без `KEY_SECRET`.
+
+---
+
+## 🧱 2. Где держать БД (чтобы не спалить лимиты Netlify)
+
+Вот твой “золотой выбор” для лёгких, бесплатных и безопасных backend-решений:
+
+| Платформа       | Тип                   | Особенности                              |
+| --------------- | --------------------- | ---------------------------------------- |
+| **Supabase**    | PostgreSQL + Auth     | Бесплатно до 500 МБ, REST API из коробки |
+| **Railway.app** | PostgreSQL / MySQL    | Очень простой деплой, auto CI/CD         |
+| **Render.com**  | PostgreSQL + Node     | Можно развернуть бек и базу рядом        |
+| **Neon.tech**   | PostgreSQL serverless | Молниеносно, бесплатный тариф            |
+| **PlanetScale** | MySQL serverless      | Надёжно, но чуть сложнее в настройке     |
+
+---
+
+### 💡 Рекомендация: **Supabase**
+
+Потому что:
+
+- у тебя уже JS-экосистема (легко интегрировать),
+- можно быстро создать таблицы `products`, `keys`, `orders`,
+- REST и GraphQL API идут “из коробки”,
+- можно добавить авторизацию (Google, GitHub, Email),
+- всё бесплатно до 500 МБ.
+
+---
+
+## 🧠 3. Архитектура минимального “магазина ключей”
+
+```
+📦 game-keys-store
+ ┣ 📁 frontend (Astro / React)
+ ┣ 📁 backend (Node.js + Express)
+ ┣ 📄 .env
+ ┣ 📄 package.json
+ ┗ 📄 README.md
+```
+
+### API
+
+| Метод | Эндпоинт               | Описание                           |
+| ----- | ---------------------- | ---------------------------------- |
+| GET   | `/api/products`        | Получить список игр                |
+| POST  | `/api/order`           | Создать заказ, редирект в платёжку |
+| POST  | `/api/payment/webhook` | Обработка оплаты                   |
+| GET   | `/api/order/:id/key`   | Выдать ключ после подтверждения    |
+
+---
+
+### Поток данных:
+
+1. 👤 Пользователь выбирает игру → нажимает “Купить”
+2. 💰 Бэк создаёт заказ → редиректит на платёжку
+3. ⚙️ После успешной оплаты → платёжка вызывает `/api/payment/webhook`
+4. 🧠 Бэк:
+   - проверяет `is_paid = true`
+   - достаёт **первый не проданный ключ**
+   - расшифровывает его
+   - помечает как `sold = true`
+   - возвращает пользователю на страницу успеха
+
+5. ✅ Пользователь получает ключ на экране или по email.
+
+---
+
+## 🔐 Безопасность и хорошая практика
+
+- Храни `KEY_SECRET` и платёжные ключи только в `.env`
+- Не держи админку без авторизации
+- Не возвращай список ключей по API
+- Сделай лимит запросов к API (rate limiting)
+
+---
+
+## ☁️ Где всё это деплоить
+
+- **Frontend (Astro/React)** — на Netlify (уже есть)
+- **Backend (Node API)** — на Render / Railway / Cloudflare Workers
+- **Database (Supabase / Neon)** — отдельно, подключается через `DATABASE_URL`
+
+---
+
+## 🧱 Правильная структура проекта
+
+Вот базовая структура, которую используют для fullstack-проектов с Astro / React + Node + Supabase:
+
+```
+📦 game-keys-store
+ ┣ 📁 frontend/              # Astro или React
+ ┃ ┣ 📁 src/
+ ┃ ┣ 📁 public/
+ ┃ ┗ 📄 package.json
+ ┣ 📁 backend/               # Express + API
+ ┃ ┣ 📁 src/
+ ┃ ┃ ┣ 📁 routes/            # /api/products, /api/order, /api/key
+ ┃ ┃ ┣ 📁 services/          # работа с БД и бизнес-логика
+ ┃ ┃ ┣ 📁 utils/             # шифрование, helpers, middlewares
+ ┃ ┃ ┗ 📄 server.js          # точка входа Express
+ ┃ ┣ 📄 package.json
+ ┃ ┣ 📄 .env
+ ┃ ┗ 📄 README.md
+ ┣ 📄 .gitignore
+ ┣ 📄 README.md
+ ┗ 📄 .env.example
+```
+
+---
+
+## ⚙️ Вариант 1 — Отдельный `backend` как полноценный проект
+
+Если ты деплоишь его, скажем, на **Render** или **Railway**, то:
+
+- заходишь в `backend/`
+- делаешь `npm init`
+- устанавливаешь зависимости:
+
+  ```bash
+  npm install express dotenv cors
+  ```
+
+- создаёшь `src/server.js`
+
+```js
+// backend/src/server.js
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+dotenv.config();
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Example route
+app.get("/", (req, res) => {
+  res.json({ message: "API is running 🚀" });
+});
+
+// Start server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+```
+
+Потом можно добавлять:
+
+- `src/routes/products.js`
+- `src/routes/orders.js`
+- `src/routes/keys.js`
+
+и подключать их в `server.js`.
+
+---
+
+## ⚙️ Вариант 2 — Monorepo, но с независимыми билд-командами
+
+Если ты всё-таки держишь фронт и бэк в одном репо, то добавь в корневой `package.json`:
+
+```json
+{
+  "name": "game-keys-store",
+  "workspaces": ["frontend", "backend"]
+}
+```
+
+А для деплоя сделай так:
+
+- **Netlify**: указываешь путь к `frontend`
+- **Render / Railway**: указываешь путь к `backend`
+
+Так они будут собираться независимо.
+Монорепо остаётся, но Netlify не будет тратить минуты на бэк.
+
+---
+
+## 📁 Куда кидать Express?
+
+👉 Всегда **внутрь папки `backend/src/`**, с точкой входа `server.js` или `index.js`.
+Это:
+
+- чисто,
+- гибко,
+- легко масштабируется.
+
+---
+
+## 💡 Бонус: пример структуры `routes/`
+
+```
+backend/
+ ┣ src/
+ ┃ ┣ routes/
+ ┃ ┃ ┣ products.js
+ ┃ ┃ ┣ order.js
+ ┃ ┃ ┗ key.js
+ ┃ ┣ services/
+ ┃ ┃ ┗ supabase.js
+ ┃ ┣ utils/
+ ┃ ┃ ┣ crypto.js
+ ┃ ┃ ┗ validatePayment.js
+ ┃ ┗ server.js
+ ┣ package.json
+ ┗ .env
+```
+
+---
+
+## 📦 Структура проекта
+
+```
+backend/
+ ┣ 📁 src/
+ ┃ ┣ 📁 routes/
+ ┃ ┃ ┣ products.js        # список игр
+ ┃ ┃ ┣ order.js           # создание заказа / обработка оплаты
+ ┃ ┃ ┗ key.js             # выдача ключей
+ ┃ ┣ 📁 services/
+ ┃ ┃ ┗ supabase.js        # подключение к БД Supabase
+ ┃ ┣ 📁 utils/
+ ┃ ┃ ┣ crypto.js          # шифрование ключей
+ ┃ ┃ ┗ validatePayment.js # проверка платежей
+ ┃ ┗ 📄 server.js          # точка входа Express
+ ┣ 📄 .env
+ ┣ 📄 package.json
+ ┗ 📄 README.md
+```
+
+---
+
+## 🧰 1. package.json
+
+```json
+{
+  "name": "game-keys-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.19.2",
+    "@supabase/supabase-js": "^2.43.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
+```
+
+---
+
+## ⚙️ 2. .env
+
+```bash
+PORT=5000
+SUPABASE_URL=https://YOUR_PROJECT.supabase.co
+SUPABASE_KEY=YOUR_SUPABASE_SERVICE_ROLE_KEY
+KEY_SECRET=YOUR_64_HEX_SECRET_KEY
+```
+
+👉 Генерировать `KEY_SECRET`:
+
+```bash
+node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+```
+
+---
+
+## 🚀 3. src/server.js
+
+```js
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+dotenv.config();
+
+import productRoutes from "./routes/products.js";
+import orderRoutes from "./routes/order.js";
+import keyRoutes from "./routes/key.js";
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// API routes
+app.use("/api/products", productRoutes);
+app.use("/api/order", orderRoutes);
+app.use("/api/key", keyRoutes);
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`🚀 Backend running on port ${PORT}`));
+```
+
+---
+
+## 🎮 4. src/routes/products.js
+
+```js
+import express from "express";
+import { supabase } from "../services/supabase.js";
+const router = express.Router();
+
+// Get all games
+router.get("/", async (req, res) => {
+  const { data, error } = await supabase.from("products").select("*");
+  if (error) return res.status(500).json({ error: error.message });
+  res.json(data);
+});
+
+export default router;
+```
+
+---
+
+## 💰 5. src/routes/order.js
+
+```js
+import express from "express";
+import { supabase } from "../services/supabase.js";
+import validatePayment from "../utils/validatePayment.js";
+const router = express.Router();
+
+// Create order (simplified)
+router.post("/", async (req, res) => {
+  const { product_id, email } = req.body;
+
+  const { data: product } = await supabase
+    .from("products")
+    .select("*")
+    .eq("id", product_id)
+    .single();
+
+  if (!product) return res.status(404).json({ error: "Product not found" });
+
+  // TODO: redirect to payment provider
+  const order = {
+    product_id,
+    email,
+    status: "pending",
+  };
+
+  const { data, error } = await supabase
+    .from("orders")
+    .insert(order)
+    .select()
+    .single();
+  if (error) return res.status(500).json({ error: error.message });
+
+  res.json({ message: "Order created", order: data });
+});
+
+// Payment webhook (simplified)
+router.post("/webhook", async (req, res) => {
+  const valid = validatePayment(req.body);
+  if (!valid) return res.status(400).json({ error: "Invalid signature" });
+
+  const { order_id } = req.body;
+  await supabase.from("orders").update({ status: "paid" }).eq("id", order_id);
+
+  res.json({ message: "Payment confirmed" });
+});
+
+export default router;
+```
+
+---
+
+## 🔑 6. src/routes/key.js
+
+```js
+import express from "express";
+import { supabase } from "../services/supabase.js";
+import { decrypt } from "../utils/crypto.js";
+const router = express.Router();
+
+// Redeem key after successful payment
+router.get("/:order_id/redeem", async (req, res) => {
+  const { order_id } = req.params;
+
+  const { data: order } = await supabase
+    .from("orders")
+    .select("*")
+    .eq("id", order_id)
+    .eq("status", "paid")
+    .single();
+
+  if (!order)
+    return res.status(404).json({ error: "Order not found or not paid" });
+
+  const { data: key } = await supabase
+    .from("keys")
+    .select("*")
+    .eq("product_id", order.product_id)
+    .eq("is_sold", false)
+    .limit(1)
+    .single();
+
+  if (!key) return res.status(404).json({ error: "No available keys" });
+
+  const decrypted = decrypt(key.key_encrypted);
+
+  // mark as sold
+  await supabase
+    .from("keys")
+    .update({ is_sold: true, sold_at: new Date() })
+    .eq("id", key.id);
+
+  res.json({ key: decrypted });
+});
+
+export default router;
+```
+
+---
+
+## 🧠 7. src/services/supabase.js
+
+```js
+import { createClient } from "@supabase/supabase-js";
+
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_KEY,
+);
+
+export { supabase };
+```
+
+---
+
+## 🔐 8. src/utils/crypto.js
+
+```js
+import crypto from "crypto";
+
+const ALGO = "aes-256-ctr";
+const SECRET = Buffer.from(process.env.KEY_SECRET, "hex");
+
+export const encrypt = (text) => {
+  const iv = crypto.randomBytes(16);
+  const cipher = crypto.createCipheriv(ALGO, SECRET, iv);
+  const encrypted = Buffer.concat([cipher.update(text), cipher.final()]);
+  return iv.toString("hex") + ":" + encrypted.toString("hex");
+};
+
+export const decrypt = (hash) => {
+  const [iv, content] = hash.split(":");
+  const decipher = crypto.createDecipheriv(
+    ALGO,
+    SECRET,
+    Buffer.from(iv, "hex"),
+  );
+  const decrypted = Buffer.concat([
+    decipher.update(Buffer.from(content, "hex")),
+    decipher.final(),
+  ]);
+  return decrypted.toString();
+};
+```
+
+---
+
+## ✅ 9. src/utils/validatePayment.js
+
+```js
+// Simplified validation stub
+export default function validatePayment(payload) {
+  // TODO: Add real payment signature validation (HMAC, etc.)
+  return payload && payload.order_id;
+}
+```
+
+---
+
+## 📄 10. README.md (кратко)
+
+```
+# Game Keys Store Backend
+
+Express + Supabase backend for digital game key distribution.
+
+## Setup
+1. cd backend
+2. npm install
+3. Create `.env` (see .env.example)
+4. npm run dev
+
+## Routes
+GET    /api/products
+POST   /api/order
+POST   /api/order/webhook
+GET    /api/key/:order_id/redeem
+```
+
+---
+
+## 🚀 1. Создаём проект в Supabase
+
+1. Заходишь на [https://supabase.com/](https://supabase.com)
+2. Логинишься через GitHub или Google
+3. Нажимаешь **"New project"**
+4. Вводишь:
+   - **Name:** `game-keys-store`
+   - **Password:** (любой, только не теряй — нужен для SQL-консоли)
+   - **Region:** ближайшую (например, “EU Central”)
+
+5. После создания → заходишь во вкладку **Project Settings → API**
+   - Копируешь:
+     - `Project URL` → это `SUPABASE_URL`
+     - `anon key` → можно использовать для фронта (чтение)
+     - `service_role key` → для бекенда (чтение/запись/удаление)
+
+---
+
+## ⚙️ 2. Создаём таблицы
+
+Перейди во вкладку **SQL Editor → New Query**, и вставь вот этот SQL:
+
+```sql
+-- 🎮 PRODUCTS TABLE
+create table products (
+  id serial primary key,
+  name text not null,
+  slug text unique,
+  price numeric(10,2) not null,
+  image text,
+  description text,
+  created_at timestamp default now()
+);
+
+-- 🔑 KEYS TABLE
+create table keys (
+  id serial primary key,
+  product_id int references products(id) on delete cascade,
+  key_encrypted text not null,
+  is_sold boolean default false,
+  sold_at timestamp
+);
+
+-- 🧾 ORDERS TABLE
+create table orders (
+  id serial primary key,
+  product_id int references products(id) on delete set null,
+  email text not null,
+  status text check (status in ('pending','paid','cancelled')) default 'pending',
+  created_at timestamp default now()
+);
+```
+
+Нажми **Run** ✅
+Теперь у тебя три таблицы:
+
+- `products` — игры
+- `keys` — зашифрованные ключи
+- `orders` — заказы
+
+---
+
+## 🧩 3. Пример наполнения данных
+
+### Добавь в SQL Editor примерный контент:
+
+```sql
+insert into products (name, slug, price, image, description)
+values
+('Cyberpunk 2077', 'cyberpunk-2077', 29.99, 'https://example.com/img/cp2077.jpg', 'Futuristic RPG'),
+('Elden Ring', 'elden-ring', 49.99, 'https://example.com/img/elden.jpg', 'Open world fantasy action RPG');
+```
+
+Теперь ты можешь проверить через REST API или Supabase UI, что игры добавились.
+
+---
+
+## 🧠 4. Добавляем тестовые ключи
+
+Пример: пусть у тебя уже есть функция шифрования `encrypt()` (из `crypto.js`).
+
+Открой Node REPL или мини-скрипт `encrypt-test.js`:
+
+```js
+import dotenv from "dotenv";
+dotenv.config();
+import { encrypt } from "./src/utils/crypto.js";
+
+console.log(encrypt("AAAAA-BBBBB-CCCCC-DDDDD")); // пример ключа
+```
+
+После запуска (`node encrypt-test.js`) получишь нечто вроде:
+
+```
+f07a8c4c7dd8a7e1b06e9a1c1e6b41f3:29d9f733a7b2c6dfb4b98c9a6e...
+```
+
+Теперь можешь вставить этот результат в Supabase:
+
+```sql
+insert into keys (product_id, key_encrypted)
+values
+(1, 'f07a8c4c7dd8a7e1b06e9a1c1e6b41f3:29d9f733a7b2c6dfb4b98c9a6e...');
+```
+
+---
+
+## 💰 5. Тест заказа (ручной сценарий)
+
+1. **Создаёшь заказ вручную**:
+
+   ```sql
+   insert into orders (product_id, email, status)
+   values (1, 'user@example.com', 'paid');
+   ```
+
+2. Теперь можешь протестировать эндпоинт:
+
+   ```
+   GET http://localhost:5000/api/key/1/redeem
+   ```
+
+   🔹 Если всё ок — Express расшифрует ключ и вернёт:
+
+   ```json
+   { "key": "AAAAA-BBBBB-CCCCC-DDDDD" }
+   ```
+
+3. В таблице `keys` поле `is_sold` станет `true`.
+
+---
+
+## 🧱 6. Связи между таблицами (для UI)
+
+| Таблица    | Связана с                    | Описание             |
+| ---------- | ---------------------------- | -------------------- |
+| `products` | —                            | Каталог игр          |
+| `keys`     | `product_id` → `products.id` | Ключи к играм        |
+| `orders`   | `product_id` → `products.id` | Заказы пользователей |
+
+---
+
+## 🧩 7. Доступы и безопасность
+
+### 🔐 Policies (RLS)
+
+Отключи **Row Level Security (RLS)** на старте (иначе API не сможет читать).
+Потом можно включить и добавить правила:
+
+- `products`: `SELECT` доступен всем
+- `keys`: только `service_role`
+- `orders`: только `service_role`
+
+**Supabase → Table editor → Table → RLS → Disable temporarily**
+
+---
+
+## 🧰 8. Интеграция с Express
+
+Теперь у тебя в `.env`:
+
+```bash
+SUPABASE_URL=https://xyz.supabase.co
+SUPABASE_KEY=your-service-role-key
+KEY_SECRET=your_64byte_hex
+PORT=5000
+```
+
+Бек сразу начнёт работать — можешь проверять:
+
+```bash
+npm run dev
+```
+
+→ `GET http://localhost:5000/api/products`
+→ `GET http://localhost:5000/api/key/1/redeem`
+
+---
+
+---
+
+## 🧱 1. Включаем RLS
+
+Заходим в **Supabase → Table editor → (выбираем таблицу)** → вкладка **RLS (Row Level Security)**
+и жмём **“Enable RLS”** для каждой таблицы.
+
+Включаем RLS на всех:
+✅ `products`
+✅ `keys`
+✅ `orders`
+
+---
+
+## 🔐 2. Policies (SQL-запросы)
+
+Теперь создаём безопасные политики.
+Перейди в **SQL Editor → New Query** и вставь 👇
+
+---
+
+### 🧩 `products` — открытая для чтения таблица
+
+```sql
+-- Разрешаем любому пользователю читать список продуктов
+create policy "Allow public read access to products"
+on products
+for select
+using (true);
+```
+
+📘 _Это позволяет фронту напрямую делать запросы через `anon key`:_
+
+```js
+supabase.from("products").select("*");
+```
+
+---
+
+### 🔑 `keys` — только backend (service_role)
+
+```sql
+-- Полный доступ только для сервисного ключа (service_role)
+create policy "Service role only access to keys"
+on keys
+for all
+using (auth.role() = 'service_role')
+with check (auth.role() = 'service_role');
+```
+
+🔒 _Никто, кроме твоего backend-а, не сможет ни читать, ни изменять таблицу `keys`._
+
+---
+
+### 🧾 `orders` — только backend (service_role)
+
+```sql
+-- Полный доступ только для service_role
+create policy "Service role only access to orders"
+on orders
+for all
+using (auth.role() = 'service_role')
+with check (auth.role() = 'service_role');
+```
+
+🧠 _Фронтенд не сможет напрямую создать заказ — всё должно идти через твой Express API._
+
+---
+
+## ⚙️ 3. Проверяем
+
+После выполнения этих SQL-запросов:
+
+- попробуй в Supabase UI → Table editor → `orders` → **"Try it out"**
+  (выбери “anon key”) — ты получишь **ошибку доступа** 🛑
+- выбери “service_role key” — всё работает ✅
+
+Это именно то, чего мы добивались.
+
+---
+
+## 🌍 4. Как теперь обращаться
+
+| Действие            | Кто делает            | Ключ           |
+| ------------------- | --------------------- | -------------- |
+| Получить список игр | Фронт (Astro / React) | `anon key`     |
+| Создать заказ       | Express backend       | `service_role` |
+| Выдать ключ         | Express backend       | `service_role` |
+
+---
+
+## 📄 5. Пример: фронт теперь безопасен
+
+Фронт (Astro / React):
+
+```js
+// только каталог
+const { data: products } = await supabase
+  .from("products")
+  .select("id, name, price, image, description");
+```
+
+Бэкэнд (Express):
+
+```js
+// сервер подключается через service_role
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_KEY,
+);
+```
+
+---
+
+## 🧰 6. Бонус — логирование действий
+
+Если хочешь отслеживать выдачу ключей, можешь добавить таблицу `logs`:
+
+```sql
+create table logs (
+  id serial primary key,
+  action text,
+  product_id int references products(id),
+  order_id int references orders(id),
+  created_at timestamp default now()
+);
+```
+
+А в Express просто делай:
+
+```js
+await supabase.from("logs").insert({
+  action: "KEY_REDEEMED",
+  product_id: 1,
+  order_id: 23,
+});
+```
+
+---
+
+## 🧠 Архитектура “оплата → выдача ключа”
+
+```
+[Фронтенд] —→ [Бэкэнд /api/order] —→ [Оплата (Stripe, YooKassa...)]
+                                    ↓
+                              [Webhook -> /api/payment/webhook]
+                                    ↓
+                         [Mark paid → Redeem Key → Send Email]
+```
+
+---
+
+## ⚙️ 1. Шаг 1 — фронтенд создаёт заказ
+
+На фронте (Astro/React):
+
+```js
+// src/lib/api.ts
+export async function createOrder(productId, email) {
+  const res = await fetch("/api/order", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ productId, email }),
+  });
+  return res.json();
+}
+```
+
+Ты вызываешь это, когда юзер жмёт “Buy” — и Express создаёт заказ в Supabase.
+
+---
+
+## 💾 2. Шаг 2 — эндпоинт `/api/order`
+
+```js
+// backend/src/routes/order.js
+import express from "express";
+import { supabase } from "../services/supabase.js";
+
+const router = express.Router();
+
+// create new order
+router.post("/", async (req, res) => {
+  const { productId, email } = req.body;
+
+  const { data, error } = await supabase
+    .from("orders")
+    .insert([{ product_id: productId, email, status: "pending" }])
+    .select()
+    .single();
+
+  if (error) return res.status(400).json({ error });
+
+  // тут можно сгенерировать ссылку на оплату Stripe/YooKassa
+  const paymentUrl = `https://example.com/pay?order_id=${data.id}`;
+
+  res.json({ order: data, paymentUrl });
+});
+
+export default router;
+```
+
+> ⚡ На этом этапе заказ в статусе `pending`, пока клиент не оплатил.
+
+---
+
+## 💰 3. Шаг 3 — создаём оплату
+
+### Вариант 1: **Stripe**
+
+```js
+import Stripe from "stripe";
+const stripe = new Stripe(process.env.STRIPE_SECRET);
+
+const session = await stripe.checkout.sessions.create({
+  payment_method_types: ["card"],
+  line_items: [
+    {
+      price_data: {
+        currency: "usd",
+        product_data: { name: "Elden Ring" },
+        unit_amount: 4999, // в центах
+      },
+      quantity: 1,
+    },
+  ],
+  mode: "payment",
+  success_url: "https://your-site.com/success",
+  cancel_url: "https://your-site.com/cancel",
+  metadata: { order_id: data.id },
+});
+```
+
+Ты возвращаешь `session.url` → и фронт редиректит юзера на страницу Stripe.
+
+---
+
+## 🕵️ 4. Шаг 4 — Webhook (самое важное)
+
+Когда платёж прошёл, Stripe/YooKassa/криптопроцессор шлёт POST-запрос на твой сервер:
+
+```
+POST /api/payment/webhook
+```
+
+Вот базовый пример:
+
+```js
+// backend/src/routes/webhook.js
+import express from "express";
+import { supabase } from "../services/supabase.js";
+import { decrypt } from "../utils/crypto.js";
+
+const router = express.Router();
+
+// Webhook handler
+router.post("/", express.json(), async (req, res) => {
+  const event = req.body;
+
+  try {
+    // ✅ Проверяем событие
+    if (event.type === "payment_succeeded") {
+      const orderId = event.metadata.order_id;
+
+      // 1️⃣ Меняем статус
+      await supabase
+        .from("orders")
+        .update({ status: "paid" })
+        .eq("id", orderId);
+
+      // 2️⃣ Ищем свободный ключ
+      const { data: key } = await supabase
+        .from("keys")
+        .select("*")
+        .eq("product_id", event.metadata.product_id)
+        .eq("is_sold", false)
+        .limit(1)
+        .single();
+
+      if (!key) throw new Error("No keys available!");
+
+      // 3️⃣ Помечаем как проданный
+      await supabase
+        .from("keys")
+        .update({ is_sold: true, sold_at: new Date() })
+        .eq("id", key.id);
+
+      // 4️⃣ Расшифровываем
+      const gameKey = decrypt(key.key_encrypted);
+
+      // 5️⃣ (опционально) Отправляем письмо
+      console.log(`🎮 Sent ${gameKey} to ${event.metadata.email}`);
+
+      // 6️⃣ Лог
+      await supabase.from("logs").insert({
+        action: "KEY_REDEEMED",
+        product_id: event.metadata.product_id,
+        order_id: orderId,
+      });
+    }
+
+    res.status(200).send("ok");
+  } catch (err) {
+    console.error("Webhook error:", err);
+    res.status(400).send("Error");
+  }
+});
+
+export default router;
+```
+
+---
+
+## 📬 5. Отправка email с ключом
+
+Используй [Resend](https://resend.com) или [Nodemailer](https://nodemailer.com) — оба отлично работают.
+
+```js
+import nodemailer from "nodemailer";
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS,
+  },
+});
+
+await transporter.sendMail({
+  from: `"Game Keys" <${process.env.MAIL_USER}>`,
+  to: event.metadata.email,
+  subject: "🎮 Your game key is ready!",
+  text: `Here’s your key: ${gameKey}`,
+});
+```
+
+---
+
+## 🌍 6. Деплой и тестирование
+
+| Компонент                  | Где держать      | Что делает                   |
+| -------------------------- | ---------------- | ---------------------------- |
+| **Supabase**               | supabase.com     | БД и API                     |
+| **Backend (Express)**      | Render / Railway | Обработка заказов и вебхуков |
+| **Frontend (Astro/React)** | Netlify / Vercel | Витрина магазина             |
+
+---
+
+## 🧩 7. Что можно добавить потом
+
+- Панель администратора (`/admin`) на React Dashboard
+- Telegram Bot, который уведомляет о новых заказах
+- Шифрование email при хранении (GDPR-friendly)
+- Оплата через **CryptoPay / Binance Pay** для Web3-проектов
+- Автоматическая выдача промокодов
