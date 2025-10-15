@@ -2,20 +2,63 @@
 > astro-multilang@0.0.1 build C:\Programming\code-archive-projects\apps\astro-multilang
 > astro build
 
-19:42:38 [content] Syncing content
-19:42:38 [WARN] [glob-loader] The base directory "C:\Programming\code-archive-projects\apps\astro-multilang\src\content\works\" does not exist.
-19:42:39 [content] Synced content
-19:42:39 [types] Generated 1.63s
-19:42:39 [build] output: "static"
-19:42:39 [build] mode: "static"
-19:42:39 [build] directory: C:\Programming\code-archive-projects\apps\astro-multilang\dist\
-19:42:39 [build] Collecting build info...
-19:42:39 [build] ✓ Completed in 1.71s.
-19:42:39 [build] Building static entrypoints...
-19:42:42 [WARN] [vite] 
+20:11:33 [content] Syncing content
+20:11:33 [WARN] [glob-loader] The base directory "C:\Programming\code-archive-projects\apps\astro-multilang\src\content\works\" does not exist.
+20:11:33 [content] Synced content
+20:11:33 [types] Generated 1.02s
+20:11:33 [build] output: "static"
+20:11:33 [build] mode: "static"
+20:11:33 [build] directory: C:\Programming\code-archive-projects\apps\astro-multilang\dist\
+20:11:33 [build] Collecting build info...
+20:11:33 [build] ✓ Completed in 1.08s.
+20:11:33 [build] Building static entrypoints...
+20:11:36 [WARN] [vite] 
 /assets/img/background.jpg referenced in /assets/img/background.jpg didn't resolve at build time, it will remain unchanged to be resolved at runtime
-19:42:45 [vite] [32m✓ built in 6.08s[39m
-19:42:45 [build] ✓ Completed in 6.26s.
+20:11:38 [vite] [32m✓ built in 4.67s[39m
+20:11:38 [build] ✓ Completed in 4.82s.
 
  building client (vite) 
-19:42:45 [vite] transforming...
+20:11:38 [vite] transforming...
+20:11:46 [vite] [32m✓[39m 456 modules transformed.
+20:11:46 [vite] rendering chunks...
+20:11:47 [vite] computing gzip size...
+20:11:47 [vite] [2mdist/[22m[32m_astro/fa-regular-400.BVHPE7da.woff2  [39m[1m[2m 18.99 kB[22m[1m[22m
+20:11:47 [vite] [2mdist/[22m[32m_astro/fa-brands-400.BfBXV7Mm.woff2   [39m[1m[2m101.22 kB[22m[1m[22m
+20:11:47 [vite] [2mdist/[22m[32m_astro/fa-solid-900.8GirhLYJ.woff2    [39m[1m[2m113.15 kB[22m[1m[22m
+20:11:47 [vite] [2mdist/[22m[35m_astro/Contact.Cq0T_Qdo.css           [39m[1m[2m  0.74 kB[22m[1m[22m[2m │ gzip:  0.40 kB[22m
+20:11:47 [vite] [2mdist/[22m[35m_astro/index.DZB6_6qH.css             [39m[1m[2m  1.25 kB[22m[1m[22m[2m │ gzip:  0.54 kB[22m
+20:11:47 [vite] [2mdist/[22m[35m_astro/Portfolio.Bi7hoJHg.css         [39m[1m[2m  2.75 kB[22m[1m[22m[2m │ gzip:  0.81 kB[22m
+20:11:47 [vite] [2mdist/[22m[35m_astro/Portfolio.tLNcSUZB.css         [39m[1m[2m  5.41 kB[22m[1m[22m[2m │ gzip:  1.50 kB[22m
+20:11:47 [vite] [2mdist/[22m[35m_astro/_slug_.BBt8Bxmg.css            [39m[1m[2m 77.01 kB[22m[1m[22m[2m │ gzip: 26.07 kB[22m
+20:11:47 [vite] [2mdist/[22m[36m_astro/AlbumCard.Cs9ltYO4.js          [39m[1m[2m  0.66 kB[22m[1m[22m[2m │ gzip:  0.37 kB[22m
+20:11:47 [vite] [2mdist/[22m[36m_astro/Hero.DLOJc2kZ.js               [39m[1m[2m  0.72 kB[22m[1m[22m[2m │ gzip:  0.36 kB[22m
+20:11:47 [vite] [2mdist/[22m[36m_astro/jsx-runtime.D_zvdyIk.js        [39m[1m[2m  0.73 kB[22m[1m[22m[2m │ gzip:  0.46 kB[22m
+20:11:47 [vite] [2mdist/[22m[36m_astro/HeaderSection.DGa1Cckb.js      [39m[1m[2m  1.90 kB[22m[1m[22m[2m │ gzip:  0.77 kB[22m
+20:11:47 [vite] [2mdist/[22m[36m_astro/ContactSection.C6n4Nk1z.js     [39m[1m[2m  2.56 kB[22m[1m[22m[2m │ gzip:  1.16 kB[22m
+20:11:47 [vite] [2mdist/[22m[36m_astro/MusicProjects.Dzwx-fo9.js      [39m[1m[2m  6.30 kB[22m[1m[22m[2m │ gzip:  2.43 kB[22m
+20:11:47 [vite] [2mdist/[22m[36m_astro/index.Be8AcK8B.js              [39m[1m[2m  7.97 kB[22m[1m[22m[2m │ gzip:  3.10 kB[22m
+20:11:47 [vite] [2mdist/[22m[36m_astro/index.DmsLHfbY.js              [39m[1m[2m 77.29 kB[22m[1m[22m[2m │ gzip: 24.05 kB[22m
+20:11:47 [vite] [2mdist/[22m[36m_astro/PageToggle.BHUrcIl2.js         [39m[1m[2m128.34 kB[22m[1m[22m[2m │ gzip: 41.79 kB[22m
+20:11:47 [vite] [2mdist/[22m[36m_astro/client.B_PwMJWB.js             [39m[1m[2m186.62 kB[22m[1m[22m[2m │ gzip: 58.54 kB[22m
+20:11:47 [vite] [32m✓ built in 8.28s[39m
+
+ generating static routes 
+20:11:47 ▶ src/pages/404.astro
+20:11:47   └─ /404.html (+10ms) 
+20:11:47 ▶ src/pages/en/404.astro
+20:11:47   └─ /en/404/index.html (+31ms) 
+20:11:47 ▶ src/pages/en/Blog.astro
+20:11:47   └─ /en/Blog/index.html (+68ms) 
+20:11:47 ▶ src/pages/en/Contact.astro
+20:11:47   └─ /en/Contact/index.html (+59ms) 
+20:11:47 ▶ src/pages/en/Music.astro
+20:11:47   └─ /en/Music/index.html (+27ms) 
+20:11:48 ▶ src/pages/en/Portfolio.astro
+20:11:48   └─ /en/Portfolio/index.html (+119ms) 
+20:11:48 ▶ src/pages/en/Privacy.astro
+20:11:48   └─ /en/Privacy/index.html (+161ms) 
+20:11:48 ▶ src/pages/en/Terms.astro
+20:11:48   └─ /en/Terms/index.html (+60ms) 
+20:11:48 ▶ src/pages/en/index.astro
+20:11:48   └─ /en/index.html (+93ms) 
+20:11:48 ▶ src/pages/ru/404.astro
