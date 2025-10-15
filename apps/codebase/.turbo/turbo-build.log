@@ -2,12 +2,12 @@
 > codebase@0.0.1 build C:\Programming\code-archive-projects\apps\codebase
 > astro build
 
-10:28:23 [content] Syncing content
-10:28:23 [content] Synced content
-10:28:23 [types] Generated 1.13s
-10:28:23 [build] output: "static"
-10:28:23 [build] mode: "static"
-10:28:23 [build] directory: C:\Programming\code-archive-projects\apps\codebase\dist\
-10:28:23 [build] Collecting build info...
-10:28:23 [build] ✓ Completed in 1.19s.
-10:28:24 [build] Building static entrypoints...
+13:28:28 [content] Syncing content
+13:28:28 [content] Synced content
+13:28:28 [types] Generated 957ms
+13:28:28 [build] output: "static"
+13:28:28 [build] mode: "static"
+13:28:28 [build] directory: C:\Programming\code-archive-projects\apps\codebase\dist\
+13:28:28 [build] Collecting build info...
+13:28:28 [build] ✓ Completed in 1.01s.
+13:28:29 [build] Building static entrypoints...
