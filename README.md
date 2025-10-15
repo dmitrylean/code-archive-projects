@@ -27,16 +27,16 @@ The project features mockups, ready-made interface blocks, mini-projects, and ar
 
 ### Frontend
 
-| Project                                                                     | Stack                    | Discription                               |
-| --------------------------------------------------------------------------- | ------------------------ | ----------------------------------------- |
-| [**astro-blog**](https://astro-blog01.netlify.app/)                         | Astro, Typescript        | Astro blog with categories and search     |
-| [**astro-multilang**](https://astro-multilang.netlify.app)                  | Astro, React, Typescript | My old multi-lang portfolio + blog.       |
-| [**astro-multilink**](https://github.com/username/api-server)               | Astro                    | Coming Soon.                              |
-| [**astroblogportfolio**](https://astroblogportfolio.netlify.app/)           | Astro, Typescript        | Astro Blog + Portfolio.                   |
-| [**b2bhelpadmin**](https://reactb2badmin.netlify.app/)                      | React, Tailwind          | React dashboard.                          |
-| [**codebase**](https://www.crashtheroutine.site/)                           | Astro, Typescript        | Portfolio, reference book, blog on Astro. |
-| [**game-portal**](https://github.com/username/godot-experiment)             | React, Tailwind          | React game portal.                        |
-| [**luxurycar-react-landing**](https://github.com/username/godot-experiment) | React                    | React landing                             |
+| Project                                                                | Stack                    | Discription                               |
+| ---------------------------------------------------------------------- | ------------------------ | ----------------------------------------- |
+| [**astro-blog**](https://astro-blog01.netlify.app/)                    | Astro, Typescript        | Astro blog with categories and search     |
+| [**astro-multilang**](https://astro-multilang.netlify.app)             | Astro, React, Typescript | My old multi-lang portfolio + blog.       |
+| [**astro-multilink**](https://github.com/username/api-server)          | Astro                    | Coming Soon.                              |
+| [**astroblogportfolio**](https://astroblogportfolio.netlify.app/)      | Astro, Typescript        | Astro Blog + Portfolio.                   |
+| [**b2bhelpadmin**](https://reactb2badmin.netlify.app/)                 | React, Tailwind          | React dashboard.                          |
+| [**codebase**](https://www.crashtheroutine.site/)                      | Astro, Typescript        | Portfolio, reference book, blog on Astro. |
+| [**game-portal**](https://game-portal-react.netlify.app/)              | React, Tailwind          | React game portal.                        |
+| [**luxurycar-react-landing**](https://luxury-car-landing.netlify.app/) | React                    | React landing                             |
 
 ---
 
