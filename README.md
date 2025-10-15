@@ -36,7 +36,7 @@ The project features mockups, ready-made interface blocks, mini-projects, and ar
 | [**b2bhelpadmin**](https://reactb2badmin.netlify.app/)                      | React, Tailwind          | React dashboard.                          |
 | [**codebase**](https://www.crashtheroutine.site/)                           | Astro, Typescript        | Portfolio, reference book, blog on Astro. |
 | [**game-portal**](https://github.com/username/godot-experiment)             | React, Tailwind          | React game portal.                        |
-| [**luxurycar-react-landing**](https://github.com/username/godot-experiment) | React                    | React landing.                            |
+| [**luxurycar-react-landing**](https://github.com/username/godot-experiment) | React                    | React landing                             |
 
 ---
 
