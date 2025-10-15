@@ -16,7 +16,10 @@ const CtaSection = () => {
           </a>
         </div>
         <div className="cta-image">
-          <img src="/assets/img/video.png" alt="Video" />
+          <img
+            src="https://static.vecteezy.com/system/resources/thumbnails/028/147/450/small_2x/close-up-front-view-of-black-sports-car-with-copy-space-generative-ai-photo.jpeg"
+            alt="Video"
+          />
         </div>
       </div>
     </section>
