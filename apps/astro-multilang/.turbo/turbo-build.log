@@ -2,16 +2,20 @@
 > astro-multilang@0.0.1 build C:\Programming\code-archive-projects\apps\astro-multilang
 > astro build
 
-19:31:53 [vite] Re-optimizing dependencies because lockfile has changed
-19:31:58 [content] Syncing content
-19:31:58 [WARN] [glob-loader] The base directory "C:\Programming\code-archive-projects\apps\astro-multilang\src\content\works\" does not exist.
-19:31:58 [content] Synced content
-19:31:58 [types] Generated 4.94s
-19:31:58 [build] output: "static"
-19:31:58 [build] mode: "static"
-19:31:58 [build] directory: C:\Programming\code-archive-projects\apps\astro-multilang\dist\
-19:31:58 [build] Collecting build info...
-19:31:58 [build] ✓ Completed in 5.05s.
-19:31:58 [build] Building static entrypoints...
-19:32:02 [WARN] [vite] 
+19:42:38 [content] Syncing content
+19:42:38 [WARN] [glob-loader] The base directory "C:\Programming\code-archive-projects\apps\astro-multilang\src\content\works\" does not exist.
+19:42:39 [content] Synced content
+19:42:39 [types] Generated 1.63s
+19:42:39 [build] output: "static"
+19:42:39 [build] mode: "static"
+19:42:39 [build] directory: C:\Programming\code-archive-projects\apps\astro-multilang\dist\
+19:42:39 [build] Collecting build info...
+19:42:39 [build] ✓ Completed in 1.71s.
+19:42:39 [build] Building static entrypoints...
+19:42:42 [WARN] [vite] 
 /assets/img/background.jpg referenced in /assets/img/background.jpg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+19:42:45 [vite] [32m✓ built in 6.08s[39m
+19:42:45 [build] ✓ Completed in 6.26s.
+
+ building client (vite) 
+19:42:45 [vite] transforming...
