@@ -37,6 +37,7 @@ The project features mockups, ready-made interface blocks, mini-projects, and ar
 | [**codebase**](https://www.crashtheroutine.site/)                      | Astro, Typescript        | Portfolio, reference book, blog on Astro. |
 | [**game-portal**](https://game-portal-react.netlify.app/)              | React, Tailwind          | React game portal.                        |
 | [**luxurycar-react-landing**](https://luxury-car-landing.netlify.app/) | React                    | React landing                             |
+| [**zloioperator**](https://zloioperator.netlify.app/)                  | Astro                    | Personal blog about call-center job       |
 
 ---
 
