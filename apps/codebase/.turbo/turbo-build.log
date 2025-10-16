@@ -2,101 +2,101 @@
 > codebase@0.0.1 build C:\Programming\code-archive-projects\apps\codebase
 > astro build
 
-14:05:10 [content] Syncing content
-14:05:10 [content] Synced content
-14:05:10 [types] Generated 507ms
-14:05:10 [build] output: "static"
-14:05:10 [build] mode: "static"
-14:05:10 [build] directory: C:\Programming\code-archive-projects\apps\codebase\dist\
-14:05:10 [build] Collecting build info...
-14:05:10 [build] ✓ Completed in 537ms.
-14:05:10 [build] Building static entrypoints...
-14:05:21 [vite] [32m✓ built in 10.69s[39m
-14:05:21 [build] ✓ Completed in 10.74s.
+14:20:04 [content] Syncing content
+14:20:04 [content] Synced content
+14:20:04 [types] Generated 385ms
+14:20:04 [build] output: "static"
+14:20:04 [build] mode: "static"
+14:20:04 [build] directory: C:\Programming\code-archive-projects\apps\codebase\dist\
+14:20:04 [build] Collecting build info...
+14:20:04 [build] ✓ Completed in 414ms.
+14:20:04 [build] Building static entrypoints...
+14:20:11 [vite] [32m✓ built in 6.29s[39m
+14:20:11 [build] ✓ Completed in 6.32s.
 
  building client (vite) 
-14:05:21 [vite] transforming...
-14:05:21 [vite] [32m✓[39m 21 modules transformed.
-14:05:22 [vite] rendering chunks...
-14:05:22 [vite] computing gzip size...
-14:05:22 [vite] [2mdist/[22m[36m_astro/client.Bx7k8SOM.js  [39m[1m[2m194.63 kB[22m[1m[22m[2m │ gzip: 60.99 kB[22m
-14:05:22 [vite] [32m✓ built in 564ms[39m
+14:20:11 [vite] transforming...
+14:20:11 [vite] [32m✓[39m 21 modules transformed.
+14:20:11 [vite] rendering chunks...
+14:20:11 [vite] computing gzip size...
+14:20:11 [vite] [2mdist/[22m[36m_astro/client.Bx7k8SOM.js  [39m[1m[2m194.63 kB[22m[1m[22m[2m │ gzip: 60.99 kB[22m
+14:20:11 [vite] [32m✓ built in 506ms[39m
 
  generating static routes 
-14:05:22 ▶ src/pages/404.astro
-14:05:22   └─ /404.html (+9ms) 
-14:05:22 ▶ src/pages/About.astro
+14:20:11 ▶ src/pages/404.astro
+14:20:11   └─ /404.html (+9ms) 
+14:20:11 ▶ src/pages/About.astro
 The collection "blog" does not exist or is empty. Please check your content config file for errors.
-14:05:22   └─ /About/index.html (+8ms) 
-14:05:22 ▶ src/pages/articles/[slug].astro
-14:05:22   ├─ /articles/createbrunchgit/index.html (+10ms) 
-14:05:22   ├─ /articles/astrocategory/index.html (+21ms) 
-14:05:22   ├─ /articles/findwork/index.html (+6ms) 
-14:05:22   ├─ /articles/freelancebot/index.html (+12ms) 
-14:05:22   ├─ /articles/figmaplugins/index.html (+4ms) 
-14:05:22   ├─ /articles/fullstacknext/index.html (+33ms) 
-14:05:22   ├─ /articles/intotailwindreact/index.html (+9ms) 
-14:05:22   ├─ /articles/importjsxinastro/index.html (+7ms) 
-14:05:22   ├─ /articles/iworkincallcenter/index.html (+6ms) 
-14:05:22   ├─ /articles/library/index.html (+6ms) 
-14:05:22   ├─ /articles/newsbot/index.html (+8ms) 
-14:05:22   ├─ /articles/makemonorepo/index.html (+10ms) 
-14:05:22   ├─ /articles/multibuildastro/index.html (+16ms) 
-14:05:22   ├─ /articles/multilangreact/index.html (+54ms) 
-14:05:22   ├─ /articles/reactguttenberg/index.html (+26ms) 
-14:05:22   ├─ /articles/solfirusscam/index.html (+6ms) 
-14:05:22   ├─ /articles/trashworks/index.html (+4ms) 
-14:05:22   ├─ /articles/workspacescript/index.html (+9ms) 
-14:05:22   ├─ /articles/addbackend/index.html (+31ms) 
-14:05:22   └─ /articles/vitemigration/index.html (+6ms) 
-14:05:22 ▶ src/pages/Articles.astro
-14:05:22   └─ /Articles/index.html (+3ms) 
-14:05:22 ▶ src/pages/category/[category].astro
-14:05:22   ├─ /category/Git/index.html (+2ms) 
-14:05:22   ├─ /category/Astro/index.html (+1ms) 
-14:05:22   ├─ /category/Blog/index.html (+1ms) 
-14:05:22   ├─ /category/Python/index.html (+1ms) 
-14:05:22   ├─ /category/Figma/index.html (+1ms) 
-14:05:22   ├─ /category/Nextjs/index.html (+1ms) 
-14:05:22   ├─ /category/React/index.html (+1ms) 
-14:05:22   ├─ /category/CDN/index.html (+1ms) 
-14:05:22   └─ /category/Development/index.html (+1ms) 
-14:05:22 ▶ src/pages/Components.astro
-14:05:22   └─ /Components/index.html (+2ms) 
-14:05:22 ▶ src/pages/Contact.astro
-14:05:22   └─ /Contact/index.html (+1ms) 
-14:05:22 ▶ src/pages/example/[slug].astro
-14:05:22   ├─ /example/audioplayer/index.html (+9ms) 
-14:05:22   ├─ /example/calc/index.html (+8ms) 
-14:05:22   ├─ /example/darktheme/index.html (+5ms) 
-14:05:22   ├─ /example/first/index.html (+5ms) 
-14:05:22   ├─ /example/forms/index.html (+20ms) 
-14:05:22   ├─ /example/contactform/index.html (+7ms) 
-14:05:22   ├─ /example/footer/index.html (+12ms) 
-14:05:22   ├─ /example/nav/index.html (+8ms) 
-14:05:22   ├─ /example/geoblock/index.html (+7ms) 
-14:05:22   ├─ /example/icons/index.html (+6ms) 
-14:05:22   ├─ /example/navburger/index.html (+9ms) 
-14:05:22   ├─ /example/nocopy/index.html (+3ms) 
-14:05:22   ├─ /example/onepagescroll/index.html (+8ms) 
-14:05:22   ├─ /example/price/index.html (+7ms) 
-14:05:22   ├─ /example/socialbar/index.html (+5ms) 
-14:05:22   └─ /example/switcher/index.html (+5ms) 
-14:05:22 ▶ src/pages/Example.astro
-14:05:22   └─ /Example/index.html (+1ms) 
-14:05:22 ▶ src/pages/news/[slug].astro
-14:05:22   └─ /news/testpost/index.html (+11ms) 
-14:05:22 ▶ src/pages/News.astro
-14:05:22   └─ /News/index.html (+2ms) 
-14:05:22 ▶ src/pages/Projects.astro
-14:05:22   └─ /Projects/index.html (+2ms) 
-14:05:22 ▶ src/pages/Services.astro
-14:05:22   └─ /Services/index.html (+1ms) 
-14:05:22 ▶ src/pages/Source.astro
-14:05:22   └─ /Source/index.html (+1ms) 
-14:05:22 ▶ src/pages/index.astro
-14:05:22   └─ /index.html (+3ms) 
-14:05:22 ✓ Completed in 516ms.
+14:20:11   └─ /About/index.html (+6ms) 
+14:20:11 ▶ src/pages/articles/[slug].astro
+14:20:11   ├─ /articles/createbrunchgit/index.html (+8ms) 
+14:20:11   ├─ /articles/astrocategory/index.html (+12ms) 
+14:20:11   ├─ /articles/findwork/index.html (+3ms) 
+14:20:11   ├─ /articles/freelancebot/index.html (+6ms) 
+14:20:11   ├─ /articles/figmaplugins/index.html (+4ms) 
+14:20:11   ├─ /articles/fullstacknext/index.html (+23ms) 
+14:20:11   ├─ /articles/intotailwindreact/index.html (+5ms) 
+14:20:11   ├─ /articles/importjsxinastro/index.html (+5ms) 
+14:20:11   ├─ /articles/iworkincallcenter/index.html (+4ms) 
+14:20:11   ├─ /articles/library/index.html (+3ms) 
+14:20:11   ├─ /articles/newsbot/index.html (+4ms) 
+14:20:11   ├─ /articles/makemonorepo/index.html (+7ms) 
+14:20:11   ├─ /articles/multibuildastro/index.html (+11ms) 
+14:20:11   ├─ /articles/multilangreact/index.html (+33ms) 
+14:20:11   ├─ /articles/reactguttenberg/index.html (+13ms) 
+14:20:11   ├─ /articles/solfirusscam/index.html (+5ms) 
+14:20:11   ├─ /articles/trashworks/index.html (+3ms) 
+14:20:11   ├─ /articles/workspacescript/index.html (+9ms) 
+14:20:11   ├─ /articles/addbackend/index.html (+25ms) 
+14:20:11   └─ /articles/vitemigration/index.html (+6ms) 
+14:20:11 ▶ src/pages/Articles.astro
+14:20:11   └─ /Articles/index.html (+2ms) 
+14:20:11 ▶ src/pages/category/[category].astro
+14:20:11   ├─ /category/Git/index.html (+2ms) 
+14:20:11   ├─ /category/Astro/index.html (+1ms) 
+14:20:11   ├─ /category/Blog/index.html (+1ms) 
+14:20:11   ├─ /category/Python/index.html (+1ms) 
+14:20:11   ├─ /category/Figma/index.html (+1ms) 
+14:20:11   ├─ /category/Nextjs/index.html (+1ms) 
+14:20:11   ├─ /category/React/index.html (+1ms) 
+14:20:11   ├─ /category/CDN/index.html (+1ms) 
+14:20:11   └─ /category/Development/index.html (+1ms) 
+14:20:11 ▶ src/pages/Components.astro
+14:20:11   └─ /Components/index.html (+2ms) 
+14:20:11 ▶ src/pages/Contact.astro
+14:20:11   └─ /Contact/index.html (+1ms) 
+14:20:11 ▶ src/pages/example/[slug].astro
+14:20:11   ├─ /example/audioplayer/index.html (+8ms) 
+14:20:11   ├─ /example/calc/index.html (+7ms) 
+14:20:11   ├─ /example/darktheme/index.html (+5ms) 
+14:20:11   ├─ /example/first/index.html (+5ms) 
+14:20:11   ├─ /example/forms/index.html (+17ms) 
+14:20:11   ├─ /example/contactform/index.html (+7ms) 
+14:20:11   ├─ /example/footer/index.html (+12ms) 
+14:20:11   ├─ /example/nav/index.html (+7ms) 
+14:20:11   ├─ /example/geoblock/index.html (+7ms) 
+14:20:11   ├─ /example/icons/index.html (+6ms) 
+14:20:11   ├─ /example/navburger/index.html (+7ms) 
+14:20:11   ├─ /example/nocopy/index.html (+3ms) 
+14:20:11   ├─ /example/onepagescroll/index.html (+6ms) 
+14:20:11   ├─ /example/price/index.html (+7ms) 
+14:20:11   ├─ /example/socialbar/index.html (+5ms) 
+14:20:11   └─ /example/switcher/index.html (+5ms) 
+14:20:11 ▶ src/pages/Example.astro
+14:20:11   └─ /Example/index.html (+1ms) 
+14:20:11 ▶ src/pages/news/[slug].astro
+14:20:11   └─ /news/testpost/index.html (+10ms) 
+14:20:11 ▶ src/pages/News.astro
+14:20:11   └─ /News/index.html (+1ms) 
+14:20:11 ▶ src/pages/Projects.astro
+14:20:11   └─ /Projects/index.html (+1ms) 
+14:20:11 ▶ src/pages/Services.astro
+14:20:11   └─ /Services/index.html (+2ms) 
+14:20:11 ▶ src/pages/Source.astro
+14:20:11   └─ /Source/index.html (+2ms) 
+14:20:11 ▶ src/pages/index.astro
+14:20:11   └─ /index.html (+1ms) 
+14:20:11 ✓ Completed in 393ms.
 
-14:05:22 [build] 57 page(s) built in 12.63s
-14:05:22 [build] Complete!
+14:20:12 [build] 57 page(s) built in 7.85s
+14:20:12 [build] Complete!

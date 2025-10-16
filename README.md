@@ -56,7 +56,6 @@ The project features mockups, ready-made interface blocks, mini-projects, and ar
 
 Source/
 ├─ apps/ # Astro / React / Next projects
-├─ mobile/ # React Native & Flutter projects
 ├─ backend/ # CMS, API, Server for control projects
 
 ```
