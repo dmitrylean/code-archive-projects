@@ -1,0 +1,272 @@
+---
+title: "Миграция с CRA на Vite без создания нового приложения"
+category: "React"
+---
+
+
+# 🚀 Полный гайд: миграция с Create React App → Vite (без пересоздания проекта)
+
+---
+
+## 🔹 Шаг 1. Удаляем старую сборку CRA
+
+CRA использует свой внутренний билд-движок `react-scripts`.
+Он больше не нужен.
+
+```bash
+npm uninstall react-scripts
+```
+
+После этого можно удалить лишние файлы:
+
+```
+setupTests.js
+reportWebVitals.js
+serviceWorker.js
+```
+
+> Эти файлы создавались CRA автоматически и теперь не используются.
+
+---
+
+## 🔹 Шаг 2. Устанавливаем Vite и React-плагин
+
+```bash
+npm install -D vite @vitejs/plugin-react
+```
+
+> Этот плагин обеспечивает поддержку JSX, Fast Refresh и TSX.
+
+---
+
+## 🔹 Шаг 3. Создаём конфиг Vite
+
+В корне проекта создай `vite.config.js`:
+
+```js
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 3000,
+  },
+})
+```
+
+---
+
+## 🔹 Шаг 4. Исправляем `package.json`
+
+Замени `"scripts"` на такие:
+
+```json
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+}
+```
+
+---
+
+## 🔹 Шаг 5. Переносим `index.html`
+
+Vite требует, чтобы `index.html` лежал **в корне проекта**,
+а не в `/public`.
+
+🔧 Сделай так:
+
+```
+/public/index.html  →  /index.html
+```
+
+---
+
+## 🔹 Шаг 6. Исправляем пути внутри `index.html`
+
+Открой `index.html` и:
+
+* удали все `%PUBLIC_URL%`
+* добавь модульный импорт React-приложения
+
+Пример:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My React App</title>
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+```
+
+> ⚠️ `<script type="module">` — это важно. Vite грузит код как ES-модуль, не через Webpack.
+
+---
+
+## 🔹 Шаг 7. Настраиваем главный входной файл
+
+В CRA он назывался `src/index.js`,
+но в Vite обычно `src/main.jsx`.
+
+Переименуй:
+
+```
+src/index.js → src/main.jsx
+```
+
+и замени содержимое на это:
+
+```jsx
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
+```
+
+---
+
+## 🔹 Шаг 8. Исправляем пути к ассетам
+
+В Vite **всё, что в `/public`**, доступно напрямую через `/`.
+Поэтому замени все ссылки вида:
+
+```html
+<img src="%PUBLIC_URL%/logo.png" />
+```
+
+на:
+
+```html
+<img src="/logo.png" />
+```
+
+---
+
+## 🔹 Шаг 9. Переменные окружения
+
+CRA использует `process.env.REACT_APP_...`,
+Vite — `import.meta.env.VITE_...`.
+
+Пример:
+
+```js
+// CRA
+const api = process.env.REACT_APP_API_URL;
+
+// Vite
+const api = import.meta.env.VITE_API_URL;
+```
+
+📄 В `.env` файл нужно писать так:
+
+```
+VITE_API_URL=https://api.example.com
+```
+
+---
+
+## 🔹 Шаг 10. Добавляем поддержку TypeScript (если нужно)
+
+Если проект на TS — добавь файл `tsconfig.json` (если его нет):
+
+```json
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["src"]
+}
+```
+
+---
+
+## 🔹 Шаг 11. (Необязательно) Подключаем Tailwind
+
+Если нужен Tailwind CSS:
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+В `tailwind.config.js` добавь пути:
+
+```js
+content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"]
+```
+
+В `src/index.css` добавь:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+---
+
+## 🔹 Шаг 12. Запуск
+
+Теперь можно запускать 🚀
+
+```bash
+npm run dev
+```
+
+Если всё правильно — ты увидишь:
+
+```
+VITE vX.X.X  ready in 300ms
+  ➜  Local:   http://localhost:3000/
+```
+
+---
+
+## 🔹 Шаг 13. Оптимизация (по желанию)
+
+Если у тебя монорепа (например `/packages/ui` или `/backend`),
+добавь в `vite.config.js`:
+
+```js
+resolve: {
+  alias: {
+    '@': '/src',
+  },
+}
+```
+
+и создай `tsconfig.json` в каждой подпапке, чтобы Vite не ругался при сканировании.
+
+---
+
+## ✅ ИТОГО
+
+| Что заменили   | CRA                      | Vite                    |
+| :------------- | :----------------------- | :---------------------- |
+| Билдер         | Webpack (react-scripts)  | ESBuild / Rollup        |
+| Главный HTML   | `/public/index.html`     | `/index.html`           |
+| Входной JS     | `/src/index.js`          | `/src/main.jsx`         |
+| Env переменные | `process.env.REACT_APP_` | `import.meta.env.VITE_` |
+| Dev server     | `react-scripts start`    | `vite`                  |
+| Build          | `react-scripts build`    | `vite build`            |
