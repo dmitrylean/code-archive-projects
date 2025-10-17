@@ -71,7 +71,7 @@ After launch, the project is available at:
 
 ---
 
-## 🔹 Run and Build Locally
+## Run and Build Locally
 
 ### All Projects at Once
 
