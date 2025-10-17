@@ -32,14 +32,6 @@
     "demo": "/wesites/luxurycar"
   },
   {
-    "title": "РумТибет",
-    "description": "Лендинг горных экскурсий",
-    "category": "wordpress",
-    "img": "/assets/img/mountainwalking.png",
-    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
-    "demo": "/wesites/mountainwalking"
-  },
-  {
     "title": "Music Artist",
     "description": "Сайт музыканта",
     "category": "wordpress",

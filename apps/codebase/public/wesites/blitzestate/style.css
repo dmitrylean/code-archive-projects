@@ -102,7 +102,7 @@ h1, h2, h3, p {
   height: 100vh;
   display: flex;
   align-items: center;
-  background: url('./assets/img/hero-bgd.png') no-repeat center/cover;
+  background: url('https://www.takewalks.com/blog/wp-content/uploads/2014/04/North-View-from-SUMMIT-One-Vanderbilt.jpg') no-repeat center/cover;
 }
 .hero-overlay {
   width: 60%;
