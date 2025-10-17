@@ -125,6 +125,14 @@
     "category": "react",
     "img": "/assets/img/luxurycar.jpg",
     "tags": ["REACT"],
-    "demo": "https://strikethehub.netlify.app"
+    "demo": "https://luxury-car-landing.netlify.app/"
+  },
+  {
+    "title": "React Dashboard",
+    "description": "Админ-панель на React",
+    "category": "react",
+    "img": "/assets/img/reactadmin.jpg",
+    "tags": ["REACT"],
+    "demo": "https://luxury-car-landing.netlify.app/"
   }
 ]
