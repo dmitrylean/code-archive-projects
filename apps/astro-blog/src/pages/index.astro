@@ -8,9 +8,11 @@ const posts = await getCollection("blog");
 ---
 
 <Layout>
-  <Hero />
-  <h2 class="section-title">Latest Posts</h2>
-  <BlogSection posts={posts} />
+  <div class="container">
+    <Hero />
+    <h2 class="section-title">Latest Posts</h2>
+    <BlogSection posts={posts} />
+  </div>
 </Layout>
 
 <style>
