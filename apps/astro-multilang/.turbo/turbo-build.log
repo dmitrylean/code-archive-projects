@@ -2,90 +2,90 @@
 > astro-multilang@0.0.1 build C:\Programming\code-archive-projects\apps\astro-multilang
 > astro build
 
-14:20:04 [content] Syncing content
-14:20:04 [WARN] [glob-loader] The base directory "C:\Programming\code-archive-projects\apps\astro-multilang\src\content\works\" does not exist.
-14:20:04 [content] Synced content
-14:20:04 [types] Generated 366ms
-14:20:04 [build] output: "static"
-14:20:04 [build] mode: "static"
-14:20:04 [build] directory: C:\Programming\code-archive-projects\apps\astro-multilang\dist\
-14:20:04 [build] Collecting build info...
-14:20:04 [build] ✓ Completed in 396ms.
-14:20:04 [build] Building static entrypoints...
-14:20:05 [WARN] [vite] 
+12:22:58 [content] Syncing content
+12:22:58 [WARN] [glob-loader] The base directory "C:\Programming\code-archive-projects\apps\astro-multilang\src\content\works\" does not exist.
+12:22:58 [content] Synced content
+12:22:58 [types] Generated 1.38s
+12:22:58 [build] output: "static"
+12:22:58 [build] mode: "static"
+12:22:58 [build] directory: C:\Programming\code-archive-projects\apps\astro-multilang\dist\
+12:22:58 [build] Collecting build info...
+12:22:58 [build] ✓ Completed in 1.45s.
+12:22:58 [build] Building static entrypoints...
+12:23:00 [WARN] [vite] 
 /assets/img/background.jpg referenced in /assets/img/background.jpg didn't resolve at build time, it will remain unchanged to be resolved at runtime
-14:20:06 [vite] [32m✓ built in 1.46s[39m
-14:20:06 [build] ✓ Completed in 1.49s.
+12:23:02 [vite] [32m✓ built in 4.40s[39m
+12:23:02 [build] ✓ Completed in 4.47s.
 
  building client (vite) 
-14:20:06 [vite] transforming...
-14:20:07 [vite] [32m✓[39m 456 modules transformed.
-14:20:07 [vite] rendering chunks...
-14:20:07 [vite] computing gzip size...
-14:20:07 [vite] [2mdist/[22m[32m_astro/fa-regular-400.BVHPE7da.woff2  [39m[1m[2m 18.99 kB[22m[1m[22m
-14:20:07 [vite] [2mdist/[22m[32m_astro/fa-brands-400.BfBXV7Mm.woff2   [39m[1m[2m101.22 kB[22m[1m[22m
-14:20:07 [vite] [2mdist/[22m[32m_astro/fa-solid-900.8GirhLYJ.woff2    [39m[1m[2m113.15 kB[22m[1m[22m
-14:20:07 [vite] [2mdist/[22m[35m_astro/Contact.Cq0T_Qdo.css           [39m[1m[2m  0.74 kB[22m[1m[22m[2m │ gzip:  0.40 kB[22m
-14:20:07 [vite] [2mdist/[22m[35m_astro/index.DZB6_6qH.css             [39m[1m[2m  1.25 kB[22m[1m[22m[2m │ gzip:  0.54 kB[22m
-14:20:07 [vite] [2mdist/[22m[35m_astro/Portfolio.Bi7hoJHg.css         [39m[1m[2m  2.75 kB[22m[1m[22m[2m │ gzip:  0.81 kB[22m
-14:20:07 [vite] [2mdist/[22m[35m_astro/Portfolio.tLNcSUZB.css         [39m[1m[2m  5.41 kB[22m[1m[22m[2m │ gzip:  1.50 kB[22m
-14:20:07 [vite] [2mdist/[22m[35m_astro/_slug_.BBt8Bxmg.css            [39m[1m[2m 77.01 kB[22m[1m[22m[2m │ gzip: 26.07 kB[22m
-14:20:07 [vite] [2mdist/[22m[36m_astro/AlbumCard.Cs9ltYO4.js          [39m[1m[2m  0.66 kB[22m[1m[22m[2m │ gzip:  0.37 kB[22m
-14:20:07 [vite] [2mdist/[22m[36m_astro/Hero.DLOJc2kZ.js               [39m[1m[2m  0.72 kB[22m[1m[22m[2m │ gzip:  0.36 kB[22m
-14:20:07 [vite] [2mdist/[22m[36m_astro/jsx-runtime.D_zvdyIk.js        [39m[1m[2m  0.73 kB[22m[1m[22m[2m │ gzip:  0.46 kB[22m
-14:20:07 [vite] [2mdist/[22m[36m_astro/HeaderSection.DGa1Cckb.js      [39m[1m[2m  1.90 kB[22m[1m[22m[2m │ gzip:  0.77 kB[22m
-14:20:07 [vite] [2mdist/[22m[36m_astro/ContactSection.C6n4Nk1z.js     [39m[1m[2m  2.56 kB[22m[1m[22m[2m │ gzip:  1.16 kB[22m
-14:20:07 [vite] [2mdist/[22m[36m_astro/MusicProjects.Dzwx-fo9.js      [39m[1m[2m  6.30 kB[22m[1m[22m[2m │ gzip:  2.43 kB[22m
-14:20:07 [vite] [2mdist/[22m[36m_astro/index.Be8AcK8B.js              [39m[1m[2m  7.97 kB[22m[1m[22m[2m │ gzip:  3.10 kB[22m
-14:20:07 [vite] [2mdist/[22m[36m_astro/index.DmsLHfbY.js              [39m[1m[2m 77.29 kB[22m[1m[22m[2m │ gzip: 24.05 kB[22m
-14:20:07 [vite] [2mdist/[22m[36m_astro/PageToggle.BHUrcIl2.js         [39m[1m[2m128.34 kB[22m[1m[22m[2m │ gzip: 41.79 kB[22m
-14:20:07 [vite] [2mdist/[22m[36m_astro/client.B_PwMJWB.js             [39m[1m[2m186.62 kB[22m[1m[22m[2m │ gzip: 58.54 kB[22m
-14:20:07 [vite] [32m✓ built in 1.30s[39m
+12:23:02 [vite] transforming...
+12:23:05 [vite] [32m✓[39m 449 modules transformed.
+12:23:05 [vite] rendering chunks...
+12:23:05 [vite] computing gzip size...
+12:23:05 [vite] [2mdist/[22m[32m_astro/fa-regular-400.BVHPE7da.woff2  [39m[1m[2m 18.99 kB[22m[1m[22m
+12:23:05 [vite] [2mdist/[22m[32m_astro/fa-brands-400.BfBXV7Mm.woff2   [39m[1m[2m101.22 kB[22m[1m[22m
+12:23:05 [vite] [2mdist/[22m[32m_astro/fa-solid-900.8GirhLYJ.woff2    [39m[1m[2m113.15 kB[22m[1m[22m
+12:23:05 [vite] [2mdist/[22m[35m_astro/Contact.Cq0T_Qdo.css           [39m[1m[2m  0.74 kB[22m[1m[22m[2m │ gzip:  0.40 kB[22m
+12:23:05 [vite] [2mdist/[22m[35m_astro/index.DZB6_6qH.css             [39m[1m[2m  1.25 kB[22m[1m[22m[2m │ gzip:  0.54 kB[22m
+12:23:05 [vite] [2mdist/[22m[35m_astro/Portfolio.pLD_WUlS.css         [39m[1m[2m  1.78 kB[22m[1m[22m[2m │ gzip:  0.69 kB[22m
+12:23:05 [vite] [2mdist/[22m[35m_astro/Music.Bi7hoJHg.css             [39m[1m[2m  2.75 kB[22m[1m[22m[2m │ gzip:  0.81 kB[22m
+12:23:05 [vite] [2mdist/[22m[35m_astro/_slug_.BBt8Bxmg.css            [39m[1m[2m 77.01 kB[22m[1m[22m[2m │ gzip: 26.07 kB[22m
+12:23:05 [vite] [2mdist/[22m[36m_astro/AlbumCard.IifJR_yG.js          [39m[1m[2m  0.66 kB[22m[1m[22m[2m │ gzip:  0.37 kB[22m
+12:23:05 [vite] [2mdist/[22m[36m_astro/Hero.DLOJc2kZ.js               [39m[1m[2m  0.72 kB[22m[1m[22m[2m │ gzip:  0.36 kB[22m
+12:23:05 [vite] [2mdist/[22m[36m_astro/jsx-runtime.D_zvdyIk.js        [39m[1m[2m  0.73 kB[22m[1m[22m[2m │ gzip:  0.46 kB[22m
+12:23:05 [vite] [2mdist/[22m[36m_astro/HeaderSection.DGa1Cckb.js      [39m[1m[2m  1.90 kB[22m[1m[22m[2m │ gzip:  0.77 kB[22m
+12:23:05 [vite] [2mdist/[22m[36m_astro/ContactSection.C6n4Nk1z.js     [39m[1m[2m  2.56 kB[22m[1m[22m[2m │ gzip:  1.16 kB[22m
+12:23:05 [vite] [2mdist/[22m[36m_astro/MusicProjects.BPsxAYwJ.js      [39m[1m[2m  6.29 kB[22m[1m[22m[2m │ gzip:  2.43 kB[22m
+12:23:05 [vite] [2mdist/[22m[36m_astro/index.Be8AcK8B.js              [39m[1m[2m  7.97 kB[22m[1m[22m[2m │ gzip:  3.10 kB[22m
+12:23:05 [vite] [2mdist/[22m[36m_astro/index.DcnDOzFm.js              [39m[1m[2m 77.29 kB[22m[1m[22m[2m │ gzip: 24.05 kB[22m
+12:23:05 [vite] [2mdist/[22m[36m_astro/WorksSection.CqUX-QwT.js       [39m[1m[2m125.29 kB[22m[1m[22m[2m │ gzip: 40.65 kB[22m
+12:23:05 [vite] [2mdist/[22m[36m_astro/client.B_PwMJWB.js             [39m[1m[2m186.62 kB[22m[1m[22m[2m │ gzip: 58.54 kB[22m
+12:23:05 [vite] [32m✓ built in 2.71s[39m
 
  generating static routes 
-14:20:07 ▶ src/pages/404.astro
-14:20:07   └─ /404.html (+6ms) 
-14:20:07 ▶ src/pages/en/404.astro
-14:20:07   └─ /en/404/index.html (+14ms) 
-14:20:07 ▶ src/pages/en/Blog.astro
-14:20:07   └─ /en/Blog/index.html (+10ms) 
-14:20:07 ▶ src/pages/en/Contact.astro
-14:20:07   └─ /en/Contact/index.html (+4ms) 
-14:20:07 ▶ src/pages/en/Music.astro
-14:20:07   └─ /en/Music/index.html (+8ms) 
-14:20:07 ▶ src/pages/en/Portfolio.astro
-14:20:07   └─ /en/Portfolio/index.html (+10ms) 
-14:20:07 ▶ src/pages/en/Privacy.astro
-14:20:07   └─ /en/Privacy/index.html (+2ms) 
-14:20:07 ▶ src/pages/en/Terms.astro
-14:20:07   └─ /en/Terms/index.html (+2ms) 
-14:20:07 ▶ src/pages/en/index.astro
-14:20:07   └─ /en/index.html (+3ms) 
-14:20:07 ▶ src/pages/ru/404.astro
-14:20:07   └─ /ru/404/index.html (+2ms) 
-14:20:07 ▶ src/pages/ru/Blog.astro
-14:20:07   └─ /ru/Blog/index.html (+4ms) 
-14:20:07 ▶ src/pages/ru/Contact.astro
-14:20:07   └─ /ru/Contact/index.html (+2ms) 
-14:20:07 ▶ src/pages/ru/Music.astro
-14:20:07   └─ /ru/Music/index.html (+3ms) 
-14:20:07 ▶ src/pages/ru/Portfolio.astro
-14:20:07   └─ /ru/Portfolio/index.html (+4ms) 
-14:20:07 ▶ src/pages/ru/Privacy.astro
-14:20:07   └─ /ru/Privacy/index.html (+2ms) 
-14:20:07 ▶ src/pages/ru/Terms.astro
-14:20:07   └─ /ru/Terms/index.html (+2ms) 
-14:20:07 ▶ src/pages/ru/index.astro
-14:20:07   └─ /ru/index.html (+2ms) 
-14:20:07 ▶ src/pages/[lang]/blog/[slug].astro
-14:20:07   ├─ /en/blog/igaveupmusic/index.html (+7ms) 
-14:20:07   └─ /ru/blog/ai-in-work/index.html (+4ms) 
-14:20:07 ▶ src/pages/[lang]/category/[category].astro
-14:20:07   ├─ /ru/category/Искусственный интеллект/index.html (+2ms) 
-14:20:07   └─ /en/category/Psychology/index.html (+2ms) 
-14:20:07 ▶ src/pages/index.astro
-14:20:07   └─ /index.html (+1ms) 
-14:20:07 ✓ Completed in 402ms.
+12:23:05 ▶ src/pages/404.astro
+12:23:05   └─ /404.html (+7ms) 
+12:23:05 ▶ src/pages/en/404.astro
+12:23:05   └─ /en/404/index.html (+28ms) 
+12:23:05 ▶ src/pages/en/Blog.astro
+12:23:05   └─ /en/Blog/index.html (+18ms) 
+12:23:05 ▶ src/pages/en/Contact.astro
+12:23:05   └─ /en/Contact/index.html (+9ms) 
+12:23:05 ▶ src/pages/en/Music.astro
+12:23:05   └─ /en/Music/index.html (+21ms) 
+12:23:05 ▶ src/pages/en/Portfolio.astro
+12:23:05   └─ /en/Portfolio/index.html (+9ms) 
+12:23:05 ▶ src/pages/en/Privacy.astro
+12:23:05   └─ /en/Privacy/index.html (+3ms) 
+12:23:05 ▶ src/pages/en/Terms.astro
+12:23:05   └─ /en/Terms/index.html (+6ms) 
+12:23:06 ▶ src/pages/en/index.astro
+12:23:06   └─ /en/index.html (+3ms) 
+12:23:06 ▶ src/pages/ru/404.astro
+12:23:06   └─ /ru/404/index.html (+2ms) 
+12:23:06 ▶ src/pages/ru/Blog.astro
+12:23:06   └─ /ru/Blog/index.html (+3ms) 
+12:23:06 ▶ src/pages/ru/Contact.astro
+12:23:06   └─ /ru/Contact/index.html (+2ms) 
+12:23:06 ▶ src/pages/ru/Music.astro
+12:23:06   └─ /ru/Music/index.html (+3ms) 
+12:23:06 ▶ src/pages/ru/Portfolio.astro
+12:23:06   └─ /ru/Portfolio/index.html (+5ms) 
+12:23:06 ▶ src/pages/ru/Privacy.astro
+12:23:06   └─ /ru/Privacy/index.html (+2ms) 
+12:23:06 ▶ src/pages/ru/Terms.astro
+12:23:06   └─ /ru/Terms/index.html (+2ms) 
+12:23:06 ▶ src/pages/ru/index.astro
+12:23:06   └─ /ru/index.html (+5ms) 
+12:23:06 ▶ src/pages/[lang]/blog/[slug].astro
+12:23:06   ├─ /en/blog/igaveupmusic/index.html (+7ms) 
+12:23:06   └─ /ru/blog/ai-in-work/index.html (+7ms) 
+12:23:06 ▶ src/pages/[lang]/category/[category].astro
+12:23:06   ├─ /ru/category/Искусственный интеллект/index.html (+3ms) 
+12:23:06   └─ /en/category/Psychology/index.html (+3ms) 
+12:23:06 ▶ src/pages/index.astro
+12:23:06   └─ /index.html (+1ms) 
+12:23:06 ✓ Completed in 512ms.
 
-14:20:07 [build] 22 page(s) built in 3.62s
-14:20:07 [build] Complete!
+12:23:06 [build] 22 page(s) built in 9.16s
+12:23:06 [build] Complete!
