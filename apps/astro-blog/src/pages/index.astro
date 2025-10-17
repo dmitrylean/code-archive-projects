@@ -9,5 +9,20 @@ const posts = await getCollection("blog");
 
 <Layout>
   <Hero />
+  <h2 class="section-title">Latest Posts</h2>
   <BlogSection posts={posts} />
 </Layout>
+
+<style>
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+</style>
