@@ -21,6 +21,11 @@ The project features mockups, ready-made interface blocks, mini-projects, and ar
 - Strapi
 - ExpressJS
 
+### _Tools_
+
+- Webpack
+- CRA
+
 ---
 
 ## Projects
