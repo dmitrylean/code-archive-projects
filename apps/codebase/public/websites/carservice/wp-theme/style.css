@@ -1,3 +1,16 @@
+/*
+Theme Name: Car Service
+Theme URI: https://example.com/luxury-theme
+Author: Adam Lean
+Author URI: https://example.com
+Description: A car service landing page WordPress theme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: carservice
+Tags: csrservice, car, service, landing-page
+*/
+
 @import "./mobile.css";
 
 html, body {
@@ -83,7 +96,7 @@ p {
 /* Hero section */
 
 .hero {
-  background: url('../img/hero.png') no-repeat center center;
+  background: url('./assets/img/hero.png') no-repeat center center;
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -290,7 +303,7 @@ p {
 /* Reapir */
 
 .repair {
-  background-image: url('../img/repair.jpg');
+  background-image: url('./assets/img/repair.jpg');
   background-size: cover;
   background-position: center;
   position: relative;

@@ -5,7 +5,7 @@
     "category": "wordpress",
     "img": "/assets/img/blitzestate.jpg",
     "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
-    "demo": "/wesites/blitzestate"
+    "demo": "/websites/blitzestate"
   },
   {
     "title": "Car Service",
@@ -13,7 +13,7 @@
     "category": "wordpress",
     "img": "/assets/img/carservice.jpg",
     "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
-    "demo": "/wesites/carservice"
+    "demo": "/websites/carservice"
   },
   {
     "title": "Отель Долина",
@@ -21,7 +21,7 @@
     "category": "wordpress",
     "img": "/assets/img/hoteldolina.jpg",
     "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
-    "demo": "/wesites/dolinahotel"
+    "demo": "/websites/dolinahotel"
   },
   {
     "title": "Luxury Detailing",
@@ -29,7 +29,7 @@
     "category": "wordpress",
     "img": "/assets/img/luxurycar.jpg",
     "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
-    "demo": "/wesites/luxurycar"
+    "demo": "/websites/luxurycar"
   },
   {
     "title": "Music Artist",
@@ -37,7 +37,7 @@
     "category": "wordpress",
     "img": "/assets/img/musicartist.jpg",
     "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
-    "demo": "/wesites/musicartist"
+    "demo": "/websites/musicartist"
   },
   {
     "title": "Music Band",
@@ -45,7 +45,7 @@
     "category": "wordpress",
     "img": "/assets/img/musicband.jpg",
     "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
-    "demo": "/wesites/musicband"
+    "demo": "/websites/musicband"
   },
   {
     "title": "Поставщик Дальнего Востока",
@@ -53,7 +53,7 @@
     "category": "wordpress",
     "img": "/assets/img/pdvpage.jpg",
     "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
-    "demo": "/wesites/pdv-landing"
+    "demo": "/websites/pdv-landing"
   },
   {
     "title": "Car Service",
@@ -61,7 +61,7 @@
     "category": "wordpress",
     "img": "/assets/img/softerio-tech.jpg",
     "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
-    "demo": "/wesites/softeriotech"
+    "demo": "/websites/softeriotech"
   },
   {
     "title": "ReadyOn",
@@ -69,7 +69,7 @@
     "category": "wordpress",
     "img": "/assets/img/sportcarrent.jpg",
     "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
-    "demo": "/wesites/sportcarrent"
+    "demo": "/websites/sportcarrent"
   },
   {
     "title": "Wishbone Partners",
@@ -77,7 +77,7 @@
     "category": "wordpress",
     "img": "/assets/img/wishbonelanding.jpg",
     "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
-    "demo": "/wesites/wishbone"
+    "demo": "/websites/wishbone"
   },
   {
     "title": "WolfMedia",
@@ -85,7 +85,7 @@
     "category": "tailwind",
     "img": "/assets/img/wolfmedia.jpg",
     "tags": ["HTML", "TAILWIND"],
-    "demo": "/wesites/wolfmedia"
+    "demo": "/websites/wolfmedia"
   },
   {
     "title": "Astro Blog + Portfolio",
