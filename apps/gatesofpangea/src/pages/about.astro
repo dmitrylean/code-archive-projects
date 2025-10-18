@@ -1,0 +1,48 @@
+---
+import HomeLayout from "../layouts/HomeLayout.astro";
+---
+
+<HomeLayout title="About Me" description="Lorem ipsum dolor sit amet">
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about_content">
+        <div class="about_text">
+          <h2>My Name Is Adam Lean</h2>
+          <h2>About Me</h2>
+          <!-- <span class="tag">About me</span> -->
+
+          <p class="about_description">
+            Hi, I am engaged in the development of websites, applications and
+            business process automation.
+          </p>
+
+          <div class="about_skills">
+            <div class="skill">
+              <img src="/svg/webdev.svg" class="icon" />
+              <h4>Layout</h4>
+              <p>Pixel Perfect layout based on a Figma layout</p>
+            </div>
+
+            <div class="skill">
+              <img src="/svg/mobiledev.svg" class="icon" />
+              <h4>Web development</h4>
+              <p>
+                Website development from scratch, or on Wordpress and Tilda. Of
+                the frameworks used are React and Django.
+              </p>
+            </div>
+
+            <div class="skill">
+              <img src="/svg/uxdesign.svg" class="icon" />
+              <h4>Automation</h4>
+              <p>
+                Development of bots, scripts and parsers in Python. Automation
+                is not a priority for me, but only an addition to the web.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</HomeLayout>

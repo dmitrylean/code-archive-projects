@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Wishbone+Partners",
+    "description": "Website of an architectural company",
+    "image": "/img/wpru.jpg",
+    "link": "https://crashtheroutines.github.io/wishboneportfolio",
+    "tech": ["/svg/html5.svg", "/svg/css3.svg", "/svg/JS.svg", "/svg/wordpress.svg"]
+  },
+  {
+    "title": "Auto repair shop",
+    "description": "Auto repair shop website",
+    "image": "/img/carservices.jpg",
+    "link": "https://crashtheroutines.github.io/carservice_landing",
+    "tech": ["/svg/html5.svg", "/svg/css3.svg", "/svg/wordpress.svg"]
+  },
+  {
+    "title": "Luxury Car",
+    "description": "Car service 2",
+    "image": "/img/carluxury.jpg",
+    "link": "https://crashtheroutines.github.io/luxurycar_landing",
+    "tech": ["/svg/html5.svg", "/svg/css3.svg", "/svg/JS.svg", "/svg/wordpress.svg"]
+  },
+    {
+    "title": "Wishbone+Partners",
+    "description": "Website of an architectural company",
+    "image": "/img/wpru.jpg",
+    "link": "https://crashtheroutines.github.io/wishboneportfolio",
+    "tech": ["/svg/html5.svg", "/svg/css3.svg", "/svg/JS.svg", "/svg/wordpress.svg"]
+  },
+  {
+    "title": "Auto repair shop",
+    "description": "Auto repair shop website",
+    "image": "/img/carservices.jpg",
+    "link": "https://crashtheroutines.github.io/carservice_landing",
+    "tech": ["/svg/html5.svg", "/svg/css3.svg", "/svg/wordpress.svg"]
+  },
+  {
+    "title": "Luxury Car",
+    "description": "Car service 2",
+    "image": "/img/carluxury.jpg",
+    "link": "https://crashtheroutines.github.io/luxurycar_landing",
+    "tech": ["/svg/html5.svg", "/svg/css3.svg", "/svg/JS.svg", "/svg/wordpress.svg"]
+  }
+]
