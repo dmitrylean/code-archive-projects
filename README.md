@@ -1,5 +1,7 @@
 # Crash The Routines (Astro)
 
+> **This repository is no longer maintained.**
+
 **Crash The Routines** is a personal codebase, UI library, portfolio and frontend development reference, hosted on **Astro**.
 The project features mockups, ready-made interface blocks, mini-projects, and articles to speed up development and share best practices.
 

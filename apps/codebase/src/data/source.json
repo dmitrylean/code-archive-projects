@@ -257,5 +257,12 @@
     "category": "tools",
     "img": "https://miro.medium.com/v2/1*8MgNAZR0qUry8fRBiIYNUw.png",
     "docs": "https://www.sphinx-doc.org/en/master/"
+  },
+  {
+    "title": "Pocketbase",
+    "description": "БД в одном файле на Golang",
+    "category": "go",
+    "img": "https://lafptocsuil8sakp.public.blob.vercel-storage.com/screenshot/https-pocketbase-io-izN1upcnCLgecfvZRkbLzB818lbaRk.png",
+    "docs": "https://pocketbase.io/"
   }
 ]
