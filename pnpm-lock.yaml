@@ -227,6 +227,24 @@ importers:
         specifier: ^3.4.17
         version: 3.4.18(yaml@2.8.1)
 
+  apps/gatesofpangea:
+    dependencies:
+      '@astrojs/mdx':
+        specifier: ^4.3.6
+        version: 4.3.7(astro@5.14.1(@netlify/blobs@10.0.11)(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(rollup@4.52.4)(terser@5.44.0)(typescript@5.9.3)(yaml@2.8.1))
+      '@astrojs/rss':
+        specifier: ^4.0.12
+        version: 4.0.12
+      '@astrojs/sitemap':
+        specifier: ^3.6.0
+        version: 3.6.0
+      astro:
+        specifier: ^5.14.1
+        version: 5.14.1(@netlify/blobs@10.0.11)(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(rollup@4.52.4)(terser@5.44.0)(typescript@5.9.3)(yaml@2.8.1)
+      sharp:
+        specifier: ^0.34.3
+        version: 0.34.4
+
   apps/luxurycar-react-landing:
     dependencies:
       '@testing-library/dom':
