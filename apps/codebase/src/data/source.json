@@ -254,7 +254,7 @@
   {
     "title": "Sphinx",
     "description": "Генератор документации для проектов на Python",
-    "category": "tools",
+    "category": "python",
     "img": "https://miro.medium.com/v2/1*8MgNAZR0qUry8fRBiIYNUw.png",
     "docs": "https://www.sphinx-doc.org/en/master/"
   },
